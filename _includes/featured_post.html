@@ -1,0 +1,26 @@
+<div class="featured-post">
+    <div class="featured-post-content">
+      <p class="featured-post-info"> By {{ post.author }} on {{ post.date | date: "%b %-d, %Y" }} </p>
+      <h2 class="featured-post-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a></h2>
+      <p class="featured-post-tagline"> {{post.tagline}} </p>
+      <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read more <strong>→ </strong></a>
+    </div>
+    {% if post.image %}
+    <div class="featured-post-image" style="background-image:url({{site.url}}/images/{{post.image}});">
+      {% else %}
+      <div class="featured-post-image" style="background-image:url({{site.url}}/images/welcome.jpg);">
+        {% endif %}
+        <a class="rainbow-polythene" href="{{ post.url | prepend: site.baseurl }}"> </a>
+      </div>
+  </div>
+
+  <div class="subscription-form">
+    <form accept-charset="UTF-8"  action="//formspree.io/singhs.ishwer@gmail.com"
+    method="POST">
+    <p class="special-text">  Hi, this is <strong> Webdioxide.com </strong> </p>
+    <p>  Get great content straight in your inbox, subscribe us. </p>
+    <input type="hidden" name="utf8" value="subscribe">
+    <input type="email" name="email" placeholder="Your Email">
+    <button type="submit">Subscribe</button>
+  </form>
+</div>

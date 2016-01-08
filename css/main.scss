@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// External Fonts
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,300,100,700,800,300italic,400italic,600,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,100,700,800,300italic,400italic,600,600italic,700italic,800italic);
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "palletes",
+        "media-query",
+        "base",
+        "atoms",
+        "featured_post",
+	"post";

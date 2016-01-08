@@ -1,0 +1,24 @@
+{% if post.image %}
+<div class="featured-post" style="background-image:url({{site.url}}/images/{{post.image}});">
+  {% else %}
+  <div class="featured-post" style="background-image:url({{site.url}}/images/welcome.png);">
+    {% endif %}
+    <a href="{{ root_url }}{{ post.url }}">
+      <div class="polythene">
+        <div class="featured-content">
+          <p>
+            <span class="author"> by {{ post.author }} </span>
+            <span class="post-meta"> on {{ post.date | date: "%b %-d, %Y" }}</span>
+          </p>
+          <h2 class="featured-title">
+            {% if post.title %}
+            <span> {{ post.title }} </span>
+
+            {% endif %}
+          </h2>
+          <p> {{ post.tagline}} </p>
+          <button> Read More </button>
+        </div>
+      </div>
+    </a>
+  </div>
