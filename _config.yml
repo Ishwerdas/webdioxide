@@ -11,7 +11,7 @@ email: singhs.ishwer@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A blog built by Ishwerdas Studio
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "http://ishwerdas.github.io/webdioxde/" # the base hostname & protocol for your site
 twitter_username: webdioixde_original
 github_username:  inderpreetsingh
 
