@@ -6,7 +6,7 @@
       <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read more <strong>→ </strong></a>
     </div>
     {% if post.image %}
-    <div class="featured-post-image" style="background-image:url({{site.url}}/images/{{post.image}});">
+    <div class="featured-post-image" style="background-image:url({{site.url}}/{{site.baseurl}}images/{{post.image}});">
       {% else %}
       <div class="featured-post-image" style="background-image:url({{site.url}}/images/welcome.jpg);">
         {% endif %}
