@@ -13,14 +13,4 @@
         <a class="rainbow-polythene" href="{{ post.url | prepend: site.baseurl }}"> </a>
       </div>
   </div>
-
-  <div class="subscription-form">
-    <form accept-charset="UTF-8"  action="//formspree.io/singhs.ishwer@gmail.com"
-    method="POST">
-    <p class="special-text">  Hi, this is <strong> Webdioxide.com </strong> </p>
-    <p>  Get great content straight in your inbox, subscribe us. </p>
-    <input type="hidden" name="utf8" value="subscribe">
-    <input type="email" name="email" placeholder="Your Email">
-    <button type="submit">Subscribe</button>
-  </form>
-</div>
+{% include subscription.html %}

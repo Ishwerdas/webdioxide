@@ -6,8 +6,8 @@
 </description>
     <link>http://webdioxide.com/</link>
     <atom:link href="http://webdioxide.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Jan 2016 14:29:20 +0530</pubDate>
-    <lastBuildDate>Sat, 09 Jan 2016 14:29:20 +0530</lastBuildDate>
+    <pubDate>Sat, 09 Jan 2016 17:23:16 +0530</pubDate>
+    <lastBuildDate>Sat, 09 Jan 2016 17:23:16 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Wed, 30 Dec 2015 17:49:19 +0530</pubDate>
-        <link>http://webdioxide.com/jekyll/update/2015/12/30/i-love-kittens-as-it.html</link>
-        <guid isPermaLink="true">http://webdioxide.com/jekyll/update/2015/12/30/i-love-kittens-as-it.html</guid>
+        <link>http://webdioxide.com/i-love-kittens-as-it.html</link>
+        <guid isPermaLink="true">http://webdioxide.com/i-love-kittens-as-it.html</guid>
         
         
         <category>jekyll</category>
@@ -56,8 +56,8 @@
 
 </description>
         <pubDate>Wed, 30 Dec 2015 17:49:19 +0530</pubDate>
-        <link>http://webdioxide.com/jekyll/2015/12/30/another-post-for-me.html</link>
-        <guid isPermaLink="true">http://webdioxide.com/jekyll/2015/12/30/another-post-for-me.html</guid>
+        <link>http://webdioxide.com/another-post-for-me.html</link>
+        <guid isPermaLink="true">http://webdioxide.com/another-post-for-me.html</guid>
         
         
         <category>jekyll</category>
@@ -82,8 +82,8 @@
 
 </description>
         <pubDate>Wed, 30 Dec 2015 17:49:19 +0530</pubDate>
-        <link>http://webdioxide.com/jekyll/update/2015/12/30/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://webdioxide.com/jekyll/update/2015/12/30/welcome-to-jekyll.html</guid>
+        <link>http://webdioxide.com/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://webdioxide.com/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
