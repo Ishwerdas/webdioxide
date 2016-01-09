@@ -14,6 +14,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://webdioxide.com" # the base hostname & protocol for your site
 twitter_username: webdioixde_original
 github_username:  inderpreetsingh
-
+permalink: "/:title.html"
 # Build settings
 markdown: kramdown
