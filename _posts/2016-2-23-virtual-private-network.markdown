@@ -14,7 +14,9 @@ There is no one right definition of democracy, but if we were to comprehend on w
 ## Basics
 
 There are two types of networks:-
+
 - Public Networks
+
 - Private Networks
 
 **Public Network** just like our internet is available to everyone, whereas **Private Network** has restricted access to only a few. An example of private network would an office network or a college network.
@@ -24,4 +26,13 @@ We do not have any control over the wires, router and other hardware that makes 
 **Virtual Private Network** acronymed as VPN is a best of both worlds situation. It's private network that runs on public network. It uses the infrastructure of public network to provide the functionality of private network. 
 
 A very good analogy to explain the basics of Public Networks, Private Networks and VPNs is given at [howstuffworks.com](http://computer.howstuffworks.com/vpn1.htm)
+
+## Benefits & Features
+Features and benefits of VPN depends upon what VPN software or what VPN service that you are using. However an average VPN would 3 inherent features **Security, Scalability & Reliability**. 
+
+A VPN provides **security** by protecting your data from intruders. If your data is on public network it does not mean it's up for public use. 
+
+VPN is as **scalable** as a public network a.k.a anyplace where internet is available. You can connect to your office network from around the world. You can work for international companies while sitting in the comfort of your home.
+
+A VPN has to be **reliable** , there should be no disruption to the users. In many cases VPN arguably provides more reliability than a private network. A private network has to be managed internally by network administrators, so it's reliability depends upon the skills of your network administrators. However Internet being a public network is managed by thousands of companies and ISPs. It's in their good interest to provide reliability and seamless service. 
 
