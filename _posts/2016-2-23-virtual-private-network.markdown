@@ -27,7 +27,7 @@ We do not have any control over the wires, router and other hardware that makes 
 
 A very good analogy to explain the basics of Public Networks, Private Networks and VPNs is given at [howstuffworks.com](http://computer.howstuffworks.com/vpn1.htm)
 
-## Benefits & Features
+## Features
 Features and benefits of VPN depends upon what VPN software or what VPN service that you are using. However an average VPN would 3 inherent features **Security, Scalability & Reliability**. 
 
 A VPN provides **security** by protecting your data from intruders. If your data is on public network it does not mean it's up for public use. 
@@ -35,4 +35,16 @@ A VPN provides **security** by protecting your data from intruders. If your data
 VPN is as **scalable** as a public network a.k.a anyplace where internet is available. You can connect to your office network from around the world. You can work for international companies while sitting in the comfort of your home.
 
 A VPN has to be **reliable** , there should be no disruption to the users. In many cases VPN arguably provides more reliability than a private network. A private network has to be managed internally by network administrators, so it's reliability depends upon the skills of your network administrators. However Internet being a public network is managed by thousands of companies and ISPs. It's in their good interest to provide reliability and seamless service. 
+
+## Types of VPN
+There are two types of VPN Remote Access VPN & Site to Site VPN. 
+
+### Remote Access VPN
+When a single user connects to a private network through VPN remotely is called Remote Access VPN. The user may be at home, vaccationing in himalayas or travelling in train, she can connect to private network as she is in office. It is also called **Virtual Private Dial Up network** . User connects to a special hardware called **Network Access Server (NAS)** also called as **Media Server** or **Remote Access Server**. NAS handles the authentication and authorization process, after which user is granted an entry to private network. Now enterprises can handle all the setup themselves or hire an *Enterprise Service Provider* to do that for them. 
+
+![Remote Access VPN](http://s.hswstatic.com/gif/vpn-1.gif "Remote Access VPN")
+
+### Site to Site VPN
+When we connet two private networks together it's called Site to Site VPN. When both sites belong to single company then it's called **Intranet Site to Site VPN** whereas when both sites belong to different companies it's called **Extranet Site to Site VPN**
+
 
