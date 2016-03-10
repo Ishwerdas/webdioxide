@@ -13,4 +13,6 @@ Any country like India would understand the need of having, at least, two armed 
 
 Similarly, we may have a strict firewall and a very advanced AntiVirus, still all you get is an illusion of security. Now, I am not saying that they are not useful but **it's foolish to expect that no one will ever bypass your security**.  
 
-Firewalls have little doors and windows inside them, the windows through which you are able to access the internet, watch a video or send an email. Antiviruses are good enough to detect only the viruses, that are already known to them and the weakest link in your security are humans. 
+Firewalls have little doors and windows inside them, the windows through which you are able to access the internet, watch a video or send an email. Antiviruses are good enough to detect only the viruses, that are already known to them and the weakest link in your security are humans. Humans that have emotions, prejudices, egoes and are prone to social engineering. 
+
+**So while the Firewalls and Antiviruses try to keep the bad stuff out of the door, Intrusion Detection Systems try to detect malicious activity that has already entered the system.** Intrusion Detection systems start when the system has failed to keep the bad stuff away.
