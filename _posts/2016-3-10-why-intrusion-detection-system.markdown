@@ -9,6 +9,8 @@ permalink: "/lectures/:title.html"
 comments: true
 ---
 
+Antiviruses and Firewalls are the gatekeepers, they try to keep enemy out but what if enemy has already entered? What to do of the enemy within? 
+
 Any country like India would understand the need of having, at least, two armed forces: one that stays on borders and tries to keep the enemy out and another that looks at the enemy within. Indians have the third largest standing army but no matter how strong it is, still intruders/terrorists get inside through the borders and wreak havoc. 26/11 and recent Gurdaspur Firings are good examples of breaches in Indian border security. 
 
 Similarly, we may have a strict firewall and a very advanced AntiVirus, still all you get is an illusion of security. Now, I am not saying that they are not useful but **it's foolish to expect that no one will ever bypass your security**.  
