@@ -47,4 +47,4 @@ When a single user connects to a private network through VPN remotely is called 
 ### Site to Site VPN
 When we connet two private networks together it's called Site to Site VPN. When both sites belong to single company then it's called **Intranet Site to Site VPN** whereas when both sites belong to different companies it's called **Extranet Site to Site VPN**
 
-
+**More at [howstuffworks.com](http://computer.howstuffworks.com/vpn1.htm)**
