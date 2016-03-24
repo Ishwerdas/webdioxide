@@ -11,19 +11,19 @@ comments: true
 
 Below are the list of links about recent topics that I have been studying and teaching. For GNDPC, students here are your notes for second sessional exams ;).
 
-#VPN
+# VPN
 
-* http://computer.howstuffworks.com/vpn.htm
+* [All about VPN](http://computer.howstuffworks.com/vpn.htm)
 
-* https://www.bestvpn.com/blog/4147/pptp-vs-l2tp-vs-openvpn-vs-sstp-vs-ikev2/
+* [VPN Protocol Basics](https://www.bestvpn.com/blog/4147/pptp-vs-l2tp-vs-openvpn-vs-sstp-vs-ikev2/)
 
-* https://technet.microsoft.com/en-us/library/cc784994(v=ws.10).aspx
+* [Internet Key Exchange](https://technet.microsoft.com/en-us/library/cc784994(v=ws.10).aspx)
 
-#IDS
+# IDS
 
-* https://www.youtube.com/watch?v=c6T4Dnixc0k
+* [All about IDS](https://www.youtube.com/watch?v=c6T4Dnixc0k)
 
-* https://www.techopedia.com/definition/4136/teardrop-attack
+* [Teardrop Attack](https://www.techopedia.com/definition/4136/teardrop-attack)
 
-* https://www.incapsula.com/ddos/ddos-attacks/denial-of-service.html
+* [DOS Attack](https://www.incapsula.com/ddos/ddos-attacks/denial-of-service.html)
 
