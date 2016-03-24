@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Some good network security links."
+date:   2013-2-23 00:08:19 +0530
+categories: links
+author: Ishwerdas
+image: ids.jpg
+permalink: "/links/:title.html"
+comments: true
+---
+
+Below are the list of links about recent topics that I have been studying and teaching. For GNDPC, students here are your notes for second sessional exams ;).
+
+#VPN
+
+* http://computer.howstuffworks.com/vpn.htm
+
+* https://www.bestvpn.com/blog/4147/pptp-vs-l2tp-vs-openvpn-vs-sstp-vs-ikev2/
+
+* https://technet.microsoft.com/en-us/library/cc784994(v=ws.10).aspx
+
+#IDS
+
+* https://www.youtube.com/watch?v=c6T4Dnixc0k
+
+* https://www.techopedia.com/definition/4136/teardrop-attack
+
+* https://www.incapsula.com/ddos/ddos-attacks/denial-of-service.html
+
+#Disaster and Recovery 
