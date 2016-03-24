@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Network security notes"
-date:   2016-4-24 00:08:19 +0530
+date:   2012-4-24 00:08:19 +0530
 categories: links
 author: Ishwerdas
 image: notes.jpg
-permalink: "/links/:title.html"
+permalink: "/links/notes.html"
 comments: true
 ---
 
