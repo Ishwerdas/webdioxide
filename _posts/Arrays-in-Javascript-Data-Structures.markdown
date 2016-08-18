@@ -7,6 +7,7 @@ author: Ishwerdas
 image: notes.jpg
 permalink: /javascript/data-structures-using-javascript-arrays.html
 comments: true
+title: Arrays Using Javascript
 ---
 # Data Structures using Javascript - Arrays 
 ## Arrays 
