@@ -1,5 +1,12 @@
 ---
 published: false
+layout: post
+date: '2016-3-22 00:08:19 +0530'
+categories: links
+author: Ishwerdas
+image: notes.jpg
+permalink: /javascript/data-structures-using-javascript-arrays.html
+comments: true
 ---
 # Data Structures using Javascript - Arrays 
 ## Arrays 
@@ -165,4 +172,4 @@ arr.splice(remPos, 1);
 
 alert(arr); // will show 45,46,48,49 
 ```
-So that completes guide to a very basic data structure called arrays. Array is a data structure that we will use to create other complex datastructures like matrices and graphs and so on. Stay tuned... 
+So that completes guide to a very basic data structure called arrays. Array is a data structure that we will use to create other complex datastructures like matrices and graphs and so on. Stay tuned...
