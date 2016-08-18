@@ -10,13 +10,15 @@ comments: true
 title: Arrays Using Javascript
 ---
 # Data Structures using Javascript - Arrays 
+
 ## Arrays 
 
 In programming we have something called variables. You can think of a variable as a named box and you can put stuff in it. Sometimes we need to put a bunch of related boxes in a bigger box, that's where arrays come into scene. 
 
 Arrays can also be thought of as list containing homogenous list items. By homogenous I mean, of the same [datatype](https://developer.mozilla.org/en/docs/Web/JavaScript/Data_structures "datatype"). 
 
-###Create a new array
+### Create a new array
+
 Creating an array is simple. Syntax is almost similar to that of creating a variable, just that a list of comma separated items are enlosed in square brackets `[  ]`
 
 ```
