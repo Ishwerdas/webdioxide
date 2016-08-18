@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2016-3-22 00:08:19 +0530'
+date: '2016-8-18 00:08:19 +0530'
 categories: links
 author: Ishwerdas
 image: notes.jpg
