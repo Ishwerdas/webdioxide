@@ -30,10 +30,10 @@ After Anaglyph glasses, polarized 3D glasses came into use, to watch 3D animated
 Now, to have a super interactive virtual reality experience, companies are making interfaces like Oculus Rift, Samsung GearVR etc, but these are not so affordable yet.
 Google has also made a low level alternative to Oculus Rift at very affordable rate, known as Google Cardboard, so that everyone can experience VR today.
 
-How we see things in 3D around us in real world?
+##How we see things in 3D around us in real world?##
 As our eyes sit side by side, each eye captures a slightly different view of an object. This is called binocular vision. When signals from the two eyes reach the brain, they are superimposed and processed into a single picture with depth. As a result, we get a 3D picture and are able to judge distances well.
 
-This is the concept from where the virtual reality get inspired from.
+This is the concept from where the virtual reality get inspired from.  
 Developers of VR apps make two different images or models of same object placed at angles that are slightly different from each other, one for each eye. Then we have to use a VR hardware like Google Cardboard or Oculus Rift to have 3D view of that image or model.
 
 From all this above, we come to know that the next interface that is approaching fast is VR interfaces. Developers will be in need to make the sites and apps responsive for these interfaces too, as today they do for mobiles and tablets.
