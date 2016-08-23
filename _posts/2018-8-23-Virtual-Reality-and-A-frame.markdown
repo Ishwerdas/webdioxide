@@ -49,13 +49,15 @@ From all this above, we come to know that the next interface that is approaching
 
 So to have a good taste of developing VR apps, I used A-frame. 
 
-#### What is A-frame?
+#### What is [A-frame](https://aframe.io/)?
 
 A-frame is an open-source framework for creating 3D and virtual reality experiences on the web. It's like the bread to your sandwich, which will provide you with some ready made entities that you can use to make interesting applications. VR scenes created by A-frame work across desktop, oculus rift, mobiles, Google cardboard with just HTML.
 
-A-frame is powered by three.js and WebVR. Three.js is a javascript library that is used to create 3D scenes and WebVR is another javascript API that provides access to the VR devices such as Oculus Rift, Google Cardboard etc.
+A-frame is powered by [three.js](http://threejs.org/) and [WebVR](https://webvr.info/). Three.js is a javascript library that is used to create 3D scenes and WebVR is another javascript API that provides access to the VR devices such as Oculus Rift, Google Cardboard etc.
 
 To make a 3D scene in a-frame, you just need to make an HTML file, add a-frame script in the <head> and add entities you want in the <body>.
+
+For Example, to make a box, the code in a-frame will look like this.
 
 ```
 <html>
@@ -69,4 +71,3 @@ To make a 3D scene in a-frame, you just need to make an HTML file, add a-frame s
 </body>
 </html>
 ```
-
