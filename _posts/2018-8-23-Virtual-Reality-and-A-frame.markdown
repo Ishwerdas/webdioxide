@@ -42,7 +42,7 @@ Google has also made a low level alternative to Oculus Rift at very affordable r
 
 #### How we see things in 3D around us in real world?
 
-As our eyes sit side by side, each eye captures a slightly different view of an object. This is called binocular vision. When signals from the two eyes reach the brain, they are superimposed and processed into a single picture with depth. As a result, we get a 3D picture and are able to judge distances well.
+As our eyes sit side by side, each eye captures a slightly different view of an object. This is called **binocular vision**. When signals from the two eyes reach the brain, they are superimposed and processed into a single picture with depth. As a result, we get a 3D picture and are able to judge distances well.
 
 This is the concept from where the virtual reality get inspired from.  
 Developers of VR apps make two different images or models of same object placed at angles that are slightly different from each other, one for each eye. Then we have to use a VR hardware like Google Cardboard or Oculus Rift to have 3D view of that image or model.
