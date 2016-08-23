@@ -11,29 +11,37 @@ title: Virtual Reality Arriving Fast
 ---
 **Virtual Reality Arriving fast **
 
+
 - Microsoft Hololens experience showcase opens for developers in New York.
 - Facebook is hiring a News and Media Content Lead for Oculus Rift.
 - A GearVR puzzle game E2per Review by VRift
 - Google reveals the plans for new VR headset and motion controller.
 - The WaveVR raises $2.5 million to mix music and virtual reality
 
+
 If you have ever heard such news, you would be wondering that every big company is stepping into 3-Dimensional VR interfaces. They are making hardware like head sets, apps, platforms to develop apps, having conferences, funding, and a lot.
 
 ###So, first let's learn, what is this all hype about? What is that we call Virtual Reality?###
+
 **Virtual Reality** is a computer technology that simulates user's presence and environment for interactions that includes, sight, touch, hearing and smell, to create a lifelike experience.
 
 ##How is it evolved?##
+
 Remember that red and green glasses we used to see 3D images in our childhood? Those are known as **Anaglyph 3D glasses** which were used to create stereoscopic 3D effect. When views through the color-coded anaglyph glasses, each of the two differently filtered colored images reaches the eye it's intended for, revealing a 3D image in front of your eyes.
+
 ![Anaglyph 3D Glasses]({{ site.url }}/imagess/colored3d.jpg)
 
 After Anaglyph glasses, polarized 3D glasses came into use, to watch 3D animated movies or 3D games. In polarized 3D system, two images are projected superimposed onto the same screen and polarization glasses are used to create the illusion of 3D images.
+
 ![Polarized 3D Glasses]({{ site.url }}/imagess/fluidglasses.jpg)
 
 Now, to have a super interactive virtual reality experience, companies are making interfaces like Oculus Rift, Samsung GearVR etc, but these are not so affordable yet.
 Google has also made a low level alternative to Oculus Rift at very affordable rate, known as Google Cardboard, so that everyone can experience VR today.
+
 ![Google Cardboard]({{ site.url }}/imagess/googlecardboard.jpg)
 
 ##How we see things in 3D around us in real world?##
+
 As our eyes sit side by side, each eye captures a slightly different view of an object. This is called binocular vision. When signals from the two eyes reach the brain, they are superimposed and processed into a single picture with depth. As a result, we get a 3D picture and are able to judge distances well.
 
 This is the concept from where the virtual reality get inspired from.  
@@ -46,6 +54,7 @@ So to have a good taste of developing VR apps, I used A-frame. A-frame is an ope
 A-frame is powered by three.js and WebVR. Three.js is a javascript library that is used to create 3D scenes and WebVR is another javascript API that provides access to the VR devices such as Oculus Rift, Google Cardboard etc.
 
 To make a 3D scene in a-frame, you just need to make an HTML file, add a-frame script in the <head> and add entities you want in the <body>.
+
 ```
 <html>
 <head>
@@ -58,3 +67,4 @@ To make a 3D scene in a-frame, you just need to make an HTML file, add a-frame s
 </body>
 </html>
 ```
+
