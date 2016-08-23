@@ -17,9 +17,11 @@ title: Virtual Reality Arriving Fast
 - The WaveVR raises $2.5 million to mix music and virtual reality
 
 
-If you have ever heard such news, you would be wondering that every big company is stepping into 3-Dimensional VR interfaces. They are making hardware like head sets, apps, platforms to develop apps, having conferences, funding, and a lot.
+If you have ever heard such news, you would be wondering that every big company is stepping into 3-Dimensional VR interfaces. They are making hardware like head sets, apps, platforms to develop apps, having conferences, funding, and a lot.  
 
-#### So, first let's learn, what is this all hype about? What is that we call Virtual Reality?
+So, first let's learn, what is this all hype about? 
+
+#### What is that we call Virtual Reality?
 
 **Virtual Reality** is a computer technology that simulates user's presence and environment for interactions that includes, sight, touch, hearing and smell, to create a lifelike experience.
 
