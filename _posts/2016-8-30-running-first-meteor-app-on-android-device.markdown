@@ -1,12 +1,14 @@
 
---- published: true 
+---
+published: true 
 layout: post 
 date: '2016-8-30 00:08:19 +0530' 
 categories: links 
 author: Shaina Sabarwal image: 
 notes.jpg permalink: /vr/virtual-reality-and-aframe.html 
 comments: true 
-title: Running My first meteor app in Android device ---
+title: Running My first meteor app in Android device
+---
 ### Running My First Meteor app on Android device
 
 Working in meteor is already super easy and a bliss. I have worked in meteor before, but this time, I wanted to use one of the best features of meteor that is making a cross platform application. 
@@ -44,7 +46,7 @@ I am working in Ubuntu, so I preferred to use Ubuntu make as it installed JDK an
 **Update your system**
 ` sudo apt-get update `
 
-**Install Ubuntu make **
+**Install Ubuntu make**
 ` sudo apt-get install ubuntu-make `
 
 **Run umake to install android**
@@ -73,7 +75,9 @@ When I tried to run my project by
 ` meteor run android-device `
 
 It asked me to install android-target: android 23 using SDK manager.
-It is given in the hint, how to run sdk manager 
+It is given in the hint, how to run sdk manager, as shown in screenshot below
+
+![Terminal Screenshot]({{ site.url }}/images/terminal.png)
 
 Just go inside the **Android/Sdk/tools** and run android 
 
@@ -81,12 +85,14 @@ Just go inside the **Android/Sdk/tools** and run android
 ` ./android `
 
 Sdk manager dialog box opened up. Just select and install the SDK tools you require. 
+![SDK Manager]({{ site.url }}/images/sdkManager.png)
 
-It is showing status Installed in this screenshot as I just installed Android API 23.
+It is showing status installed in this screenshot as I just installed Android API 23.
 
-Connect your phone before running the app again.
+### Connect your phone before running the app again.###
 
-1. Connect your android device to your computer through USB. 
+1. Connect your android device to your computer through USB.  
+
 2. Enable the USB debugging from Developer options settings into your android device. On Android 4.2 and higher, the Developer options screen is hidden by default. To make it visible, go to Settings > About phone and tap Build number seven times. Return to the previous screen to find Developer options at the bottom.
 
 (At my phone Xiaomi Redmi Note 3, nothing happened by tapping on Build Number seven times, after few searches, I came to know how to get to Developers options. Go to Settings > About phone and tap MIUI version seven times. Go to Settings > Additional Settings and you will find Developers Options. Open it and Enable USB debugging.)
@@ -107,11 +113,11 @@ Now execute:
 
 Now run the app, Go to your project
 ` cd piaoma `
-
 ` meteor run android-device `
 
 This will install and run your app into your android device.
 
+Thank you :)
 
 
 
