@@ -49,6 +49,7 @@ I am working in Ubuntu, so I preferred to use Ubuntu make as it installed JDK an
 ` sudo apt-get update `
 
 **Install Ubuntu make**
+
 ` sudo apt-get install ubuntu-make `
 
 **Run umake to install android**
@@ -76,6 +77,7 @@ Then Reload .bashrc (by executing source ~/.bashrc)
 When I tried to run my project by 
 
 ` cd ~/piaoma `
+
 ` meteor run android-device `
 
 It asked me to install android-target: android 23 using SDK manager.
