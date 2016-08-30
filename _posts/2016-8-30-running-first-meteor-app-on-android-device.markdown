@@ -33,6 +33,7 @@ Now I wanted to run and install this project piaoma at my Android phone.
 For this, I followed the Meteor guide https://guide.meteor.com/mobile.html#installing-prerequisites
 
 To run your meteor application inside your android device, you need first to add android platform 
+
 ` meteor add-platform android `
 
 But, it will require you to install some prerequisites including JDK (Java Development Kit) and Android Studio.
@@ -40,15 +41,18 @@ But, it will require you to install some prerequisites including JDK (Java Devel
 I am working in Ubuntu, so I preferred to use Ubuntu make as it installed JDK and Android Studio both easily just by using a few commands. 
 
 **Add ubuntu make ppa first**
+
 ` sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make `
 
 **Update your system**
+
 ` sudo apt-get update `
 
 **Install Ubuntu make**
 ` sudo apt-get install ubuntu-make `
 
 **Run umake to install android**
+
 ` umake android `
 
 Next step is Setting **ANDROID_HOME** and adding the tools directories to your **PATH**
@@ -66,6 +70,7 @@ and add those lines at the last of the file.
 Save and Quit
 
 Then Reload .bashrc (by executing source ~/.bashrc)
+
 ` source ~/.bashrc`
 
 When I tried to run my project by 
@@ -105,12 +110,15 @@ Log in as root and create this file: /etc/udev/rules.d/51-android.rules.
 Use this format to add each vendor to the file:
 
 `SUBSYSTEM=="usb", ATTR{idVendor}=="2717", MODE="0666", GROUP="plugdev" `
+
 2717 is the vendorID of XIAOMI, you can search vendorID of your device online easily. 
 
 Now execute:
+
 ` sudo chmod a+r /etc/udev/rules.d/51-android.rules `
 
 Now run the app, Go to your project
+
 ` cd piaoma `
 ` meteor run android-device `
 
