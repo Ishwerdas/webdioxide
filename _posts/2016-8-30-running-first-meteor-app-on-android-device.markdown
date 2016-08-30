@@ -86,6 +86,7 @@ It is given in the hint, how to run sdk manager, as shown in screenshot below
 Just go inside the **Android/Sdk/tools** and run android 
 
 ` cd ~/Android/Sdk/tools `
+
 ` ./android `
 
 Sdk manager dialog box opened up. Just select and install the SDK tools you require. 
@@ -120,6 +121,7 @@ Now execute:
 Now run the app, Go to your project
 
 ` cd piaoma `
+
 ` meteor run android-device `
 
 This will install and run your app into your android device.
