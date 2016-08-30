@@ -1,15 +1,14 @@
-
 ---
-published: true 
-layout: post 
-date: '2016-8-30 00:08:19 +0530' 
-categories: links 
-author: Shaina Sabarwal image: 
-notes.jpg permalink: /vr/virtual-reality-and-aframe.html 
-comments: true 
-title: Running My first meteor app in Android device
+published: true
+layout: post
+date: '2016-8-30 00:08:19 +0530'
+categories: links
+author: Shaina Sabarwal
+image: notes.jpg
+permalink: /meteor-app-on-android-device
+comments: true
+title: Running My Meteor App on Android Device
 ---
-### Running My First Meteor app on Android device
 
 Working in meteor is already super easy and a bliss. I have worked in meteor before, but this time, I wanted to use one of the best features of meteor that is making a cross platform application. 
 So the challenge here was to run and install my meteor app in my Xiaomi Redmi Note 3 Android (version Lollipop) phone.
