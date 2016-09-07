@@ -60,8 +60,9 @@ Next step is Setting **ANDROID_HOME** and adding the tools directories to your *
 
 If you see the guide, the path to Sdk that is to be put into **ANDRIOD_HOME** variable is ~/Library/Android/sdk, but Ubuntu-make made Android folder in my home folder and so the path that I had to store in ANDROID_HOME is "/home/shaina/Android/Sdk" , where 'shaina' is my username
 
-**export ANDROID_HOME="/home/shaina/Android/Sdk"
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools**
+**export ANDROID_HOME="/home/shaina/Android/Sdk"**
+
+**export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools**
 
 I added above two lines in .bashrc file which resides in my home. To do that, just open the **.bashrc** file (I use vim as editor)
 
