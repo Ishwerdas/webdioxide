@@ -43,7 +43,7 @@ var i = NULL;
 typeof i; //object 
 ```
 
-This is a **bug** that exists since the beginning of javascript. The reason that this bug exists is simple. Each javascript value has a type tag. First 1-3 bits of each value are reserved for it's type. The type tags for different types are as follows: -
+This is a **bug** that exists since the beginning of javascript. The reason that this bug exists is simple. Each javascript value has a type tag. First 1-3 bits of each value are reserved for it's type. The type tags for different types were as follows: -
 
 * 000 - object
 * 001 - int
@@ -51,7 +51,11 @@ This is a **bug** that exists since the beginning of javascript. The reason that
 * 100 - string
 * 110 - boolean
 
-After the type tage folows the actual value. To determine the value as null, the NULL pointer of machine code is used. Which is also list of 0s and that get confused with 000 tag of object and thus the bug. 
+
+* To define **undefined** they used a special number 2 <sup>-30</sup> 
+* To define **null** NULL pointer was used.
+
+After the type tage folows the actual value. `typeof` got confused between zeros of null pointer and 000 tag of object and thus the bug. 
 
 ## Why isn't this bug removed?
 
