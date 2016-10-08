@@ -1,13 +1,13 @@
 ---
 published: true
 layout: post
-date: '2016-10-08 00:08:19 +0530'dskfa
+date: '2016-10-08 00:08:19 +0530'
 categories: links
 author: Ishwerdas
 image: notes.jpg
-permalink: /js/why-typeof-null-returns-object-the-history
+permalink: /javascript/why-typeof-null-returns-object-the-history
 comments: true
-title: History of typeof null returning object.
+title: History behind typeof null equals object.
 ---
 
 ## Introduction
