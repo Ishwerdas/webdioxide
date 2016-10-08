@@ -13,7 +13,7 @@ title: History behind typeof null equals object.
 ## Introduction
 
 Javascript is undoubtedly bit weird at times. However for me, that's what makes it special. 
-It holds in itself all the history and culture that brough upon us the dawn of the the internet. Javascript has 6 or 7 (depending upon how you count) primitive types. They are 
+Javascript has 6 or 7 (depending upon how you count) primitive types. They are 
 
 * string
 * number
@@ -36,7 +36,7 @@ var b =  true;
 typeof b; //boolean
 ```
 
-However if you run `typeof` on null value, it returns `object`, something you won't expect from a primitive type.
+However if you run `typeof` on a null value, it returns `object`, something you won't expect from a primitive type.
 
 ```
 var i = NULL;
@@ -51,7 +51,7 @@ This is a **bug** that exists since the beginning of javascript. The reason that
 * 100 - string
 * 110 - boolean
 
-To determine the value as null, the NULL pointer of machine code is used. Which is also list of 0s and that get confused with 000 tag of object and thus the bug. 
+After the type tage folows the actual value. To determine the value as null, the NULL pointer of machine code is used. Which is also list of 0s and that get confused with 000 tag of object and thus the bug. 
 
 ## Why isn't this bug removed?
 
