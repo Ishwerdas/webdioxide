@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2016-10-08 00:08:19 +0530'
+date: '2016-10-13 13:07:22 +0530'
 categories: javascript
 author: Ishwerdas
 image: closures.jpg
