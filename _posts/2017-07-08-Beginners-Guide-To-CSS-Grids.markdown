@@ -90,7 +90,7 @@ Let's add the rows now , **explicitly**.
    * & rest of them adjusting their height to content 
    */
   grid-template-rows: 50px auto 100px;  
-  
+ } 
 ```
 <p data-height="265" data-theme-id="dark" data-slug-hash="owPKKp" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 2.1" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/owPKKp/">Beginner's Guide to CSS Grids - Step 2.1</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -104,7 +104,7 @@ Just like `grid-template-columns` , `grid-template-rows` add explicit rows to gr
   grid-template-rows: 50px auto 100px;  
   
   grid-auto-rows: 150px;
-  
+}  
 ```
 <p data-height="265" data-theme-id="dark" data-slug-hash="YQOmmL" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 2.2" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/YQOmmL/">Beginner's Guide to CSS Grids - Step 2.2</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -123,6 +123,7 @@ Beside rows and columns, most grids have third thing called gutters. Gutters are
   
   grid-column-gap:20px;
   grid-row-gap:20px;
+}
 ```
 If you want same gap on rows as in columns, there's a shorthand that you can use called `grid-gap`.
 
@@ -134,6 +135,7 @@ If you want same gap on rows as in columns, there's a shorthand that you can use
   grid-auto-rows: 150px;
   
   grid-gap:20px;
+}
 ```
 <p data-height="265" data-theme-id="dark" data-slug-hash="qjJWWP" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 3" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/qjJWWP/">Beginner's Guide to CSS Grids - Step 3</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
