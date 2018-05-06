@@ -4,7 +4,7 @@ layout: post
 date: '2016-8-23 00:08:19 +0530'
 categories: links
 author: Shaina Sabarwal
-image: notes.jpg
+image: vr.jpg
 permalink: /vr/virtual-reality-and-aframe.html
 comments: true
 title: Virtual Reality Arriving Fast

@@ -1,0 +1,37 @@
+$post-width:700px;
+$bar-width:300px;
+main {
+    display:grid;
+    grid-template-columns:300px 1fr;
+}
+
+article {
+    height:100vh;
+    overflow:hidden;
+}
+
+article header{
+    padding:10px 21px 10px 21px;
+    text-align:center;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.post-bar{
+    width:300px;
+    height:100vh;
+    background-size:cover;
+    background-position:right bottom;
+    box-shadow:1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.content-wrapper{
+    max-width:$post-width;
+    margin:auto;
+}
+
+.post-content{
+    margin-top:0px;
+    height:calc(100vh - 70px);
+    overflow:auto;   
+    padding:0 21px;
+}

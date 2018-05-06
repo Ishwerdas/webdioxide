@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Arrays Using Javascript</title>
+  <meta name="description" content="**Data Structures using Javascript - Arrays **">
+  <link href="https://fonts.googleapis.com/css?family=Rasa:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:8080/javascript/data-structures-using-javascript-arrays.html">
+  <link rel="alternate" type="application/rss+xml" title="Webdioxide" href="http://0.0.0.0:8080/feed.xml">
+</head>
+
+  
+
+  <body>
+        <main>
+<aside class="post-bar" style="background-image:url('/images/javascript-2.jpg')"> </aside>
+
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header" >
+    <h1 class="post-title" itemprop="name headline">Arrays Using Javascript</h1>
+  </header>
+  
+  
+  
+  
+  <div class="post-content">
+    <div class="content-wrapper">
+  <p>**Data Structures using Javascript - Arrays **</p>
+
+<p>In programming we have something called variables. You can think of a variable as a named box and you can put stuff in it. Sometimes we need to put a bunch of related boxes in a bigger box, that’s where arrays come into scene.</p>
+
+<p>Arrays can also be thought of as list containing homogenous list items. By homogenous I mean, of the same <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Data_structures" title="datatype">datatype</a>.</p>
+
+<h3 id="create-a-new-array">Create a new array</h3>
+
+<p>Creating an array is simple. Syntax is almost similar to that of creating a variable, just that a list of comma separated items are enlosed in square brackets <code class="highlighter-rouge">[  ]</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var cars = ['lambohrgini' , 'audi' , 'mercedes' , 'datsun'];
+var years = [1990, 1992, 1985, 1984, 1947] ;
+</code></pre>
+</div>
+
+<p>You can also create array using <code class="highlighter-rouge">new Array()</code> method. To do that</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var arr = new Array(1,2,3,4);
+</code></pre>
+</div>
+
+<h3 id="accessing-a-particular-element-of-array-index">Accessing a particular element of array (index)</h3>
+
+<p>Each element of array has an index. The indices start from 0.  You can access each element of array using arrayname followed by it’s index in square brackets.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>var cars = ['lambohrgini' , 'audi' , 'mercedes' , 'datsun'];
+var years = [1990, 1992, 1985, 1984, 1947] ;
+alert(cars[0]); // will alert lambohrgini
+alert(cars[2]); // will alert mercedes
+</code></pre>
+</div>
+<p>In javascript we can have named indices too, which is discussed later.</p>
+
+<p>There are three basic operations that one can perform on array</p>
+<ul>
+  <li><strong>Traversing</strong> an array</li>
+  <li><strong>Insert</strong> an element into array</li>
+  <li><strong>Remove</strong> an element from array</li>
+</ul>
+
+<h3 id="traversing-an-array">Traversing an array</h3>
+
+<p>Traversing an array means, visiting each element of array one by one and then performing a certain operation on it.</p>
+
+<p>We need to use a loop to access each element of array. There are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration" title="bunch of loops">bunch of loops</a> in Javascript, we will be using basic <code class="highlighter-rouge">for loop</code> for traversing. For loops exists in almost all the high level languages, so you can make use of this guide even if you are not that into Javascript.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var friends = ['jane', 'mary', 'valerie', 'stephanie', 'carol']
+for(i = 0; i &lt; 5; i++) {
+    alert(friends[i]); 
+}
+</code></pre>
+</div>
+
+<p>What for loops does is, it initializes a variable named <code class="highlighter-rouge">i</code> to <code class="highlighter-rouge">0</code>, and as long as <code class="highlighter-rouge">i</code> is less than five <code class="highlighter-rouge">&lt; 5</code> , it keeps increasing it by 1 <code class="highlighter-rouge">i++</code>. This way the statement inside for loop runs 5 times, showing each element of array in a popup.</p>
+
+<p>This syntax is fine when we know the legnth of array (5 here) .In case the length of array is changing or we are not yet sure about how many elements we would put in it, then we can use a special javascript method called <code class="highlighter-rouge">.length</code> to access the length of array.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var friends = ['jane', 'mary', 'valerie', 'stephanie', 'carol'];
+
+for(i = 0; i &lt; friends.length; i++) {
+    alert(friends[i]); 
+}
+</code></pre>
+</div>
+
+<p>Another simpler way to traverse arrays in javascript is to use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement" title="for .. in ">for .. in </a>loop.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var friends = ['jane', 'mary', 'valerie', 'stephanie', 'carol']
+
+for(i in friends) {
+    alert(friends[i]); 
+}
+</code></pre>
+</div>
+
+<h3 id="insert-an-element-at-end-or-array">Insert an element at end or array</h3>
+
+<p>Inserting an element at end of array is the simplest. Just find the length of array. Now you should note here that length of array is always one greater than highest index. So in following array</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var arr = [45,46,47,48,49];
+</code></pre>
+</div>
+
+<p>Highest index value is 4, as <code class="highlighter-rouge">arr[4]</code> is <code class="highlighter-rouge">49</code> but <code class="highlighter-rouge">arr.length</code> is <code class="highlighter-rouge">5</code> as there are 5 elements in array. So if we want to add an element at end of this array, we need to do it at <code class="highlighter-rouge">arr[5]</code> which can also be written as <code class="highlighter-rouge">arr[arr.length]</code>. So to insert an element at end of array, allw we have to do is :-</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var arr = [45,46,47,48,49];
+arr[arr.length] = 50; // which is same ass arr[5] = 50;
+
+alert(arr); // will show 45,46,47,48,49,50 
+</code></pre>
+</div>
+
+<p>The above funciton was a bit general that can be used in any other programming language. A more javascript-ish way is to use <code class="highlighter-rouge">.push()</code> method.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var arr = [45,46,47,48,49];
+arr.push(50);
+
+alert(arr); // will show 45,46,47,48,49,50 
+</code></pre>
+</div>
+
+<h3 id="insert-an-element-at-any-index">Insert an element at any index</h3>
+
+<p>Inserting an element at beginning or mid of array is a tiny bit tricky. Because say if you want to add an element at 3rd index , then you have to move all the elements that come after 3rd element one index ahead.</p>
+
+<p>Let’s first setup our array and variables. We need an array, a new value to be inserted into that array, and a position at which the array will be inserted.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var fruits = ['apple','orange', 'kiwi', 'banana', 'mango'];
+var newValue = 'pear';
+var insPos = 2; 
+//we will add a new fruit (pear) at fruits[2], a.k.a in place of 'kiwi'
+</code></pre>
+</div>
+
+<p>Now we need to know the highest index value of an array. As discussed earlier array.length is always 1 greater than highest index value. We can also say that highest index value is 1 less than length of an array.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var fruits = ['apple','orange', 'kiwi', 'banana', 'mango'];
+var newValue = 'pear';
+var insPos = 2; //insert Position
+//we will add a new fruit (pear) at fruits[2], a.k.a in place of 'kiwi'
+
+highestIndex = fruits.length - 1;
+</code></pre>
+</div>
+
+<p>Our array and all other variables are now prepared. Next step would be to move each element after <code class="highlighter-rouge">insPos</code> one index ahead.We start from last element of array and move upwards till insert position.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>for(i = highestIndex; i &gt;=insPos; i--){
+    fruits[i+1] = fruits[i];
+}
+</code></pre>
+</div>
+
+<p>Now only thing left is to insert element at required position.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    fruits[insPos] = newValue;
+</code></pre>
+</div>
+<p>The complete code now looks like.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>var fruits = ['apple','orange', 'kiwi', 'banana', 'mango'];
+var newValue = 'pear';
+var insPos = 2; 
+//we will add a new fruit (pear) at fruits[2], a.k.a in place of 'kiwi'
+
+highestIndex = fruits.length - 1;
+
+for(i = highestIndex; i &gt;=insPos; i--){
+    fruits[i+1] = fruits[i];
+}
+
+fruits[i] = newValue;
+alert(fruits);
+</code></pre>
+</div>
+
+<p>Hurray! now we have inserted an element into array.</p>
+
+<h3 id="removing-an-element-from-end-of-array">Removing an element from end of array.</h3>
+
+<p>I have been unable to find a general way to remove an element from array in javascript. If you know one, let me know in comments or you can also send a PR to this article. So we are going to use Javascript’s <code class="highlighter-rouge">.pop()</code> method.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var arr = [45,46,47,48,49];
+arr.pop();
+
+alert(arr); // will show 45,46,47,48 
+</code></pre>
+</div>
+
+<h3 id="removing-an-element-from-any-index">Removing an element from any index.</h3>
+
+<p>For removing an element from a certain index we will use <code class="highlighter-rouge">.splice()</code> method of javascript. Which removes the array at an index with single line of code. If that function was not available we would have deleted an array item from the array and then moved all the next elements one index value back. But as I don’t know a general method of deleting some variable or array element in javascript, I will use built-in method splice to have same effect.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var arr = [45,46,47,48,49];
+var remPos = 2;
+arr.splice(remPos, 1);
+
+alert(arr); // will show 45,46,48,49 
+</code></pre>
+</div>
+
+<p>So that completes guide to a very basic data structure called arrays. Array is a data structure that we will use to create other complex datastructures like matrices and graphs and so on. Stay tuned…</p>
+
+    <p class="post-meta">
+      <time datetime="2016-08-17T18:38:19+00:00" itemprop="datePublished">Aug 17, 2016</time>
+       • 
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Ishwerdas</span>
+      </span>
+    </p>
+    
+  <div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+var disqus_config = function () {
+this.page.identifier = "/javascript/Arrays-in-Javascript-Data-Structures"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//webdioxide.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+  <div class="subscription-form">
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="//ishwerdas.us12.list-manage.com/subscribe/post?u=8fe535baf9aa31d75654e5bd5&amp;id=37583f7d93" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+
+    <p class="special-text">  Hi, this is <strong> Webdioxide.com </strong> </p>
+    <p>  Get great content straight in your inbox, subscribe us. </p>
+	<input type="email" placeholder="Your Email" name="EMAIL" class="required email" id="mce-EMAIL">
+	<span id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</span>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8fe535baf9aa31d75654e5bd5_37583f7d93" tabindex="-1" value=""></div>
+    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</div>
+</form>
+</div>
+
+</div>
+
+  
+  </div>
+</div>
+</article>
+</main>
+    <footer class="site-footer">
+
+<!--  <div class="wrapper">
+
+    <h2 class="footer-heading">Webdioxide</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Webdioxide</li>
+          <li><a href="mailto:singhs.ishwer@gmail.com">singhs.ishwer@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/inderpreetsingh"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">inderpreetsingh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/webdioixde_original"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">webdioixde_original</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>A blog built by Ishwerdas Studio
+</p>
+      </div>
+    </div>
+
+  </div>-->
+
+</footer>
+
+  </body>
+</html>

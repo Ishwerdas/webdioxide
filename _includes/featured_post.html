@@ -1,16 +1,22 @@
-<div class="featured-post">
-    <div class="featured-post-content">
-      <p class="featured-post-info"> By {{ post.author }} on {{ post.date | date: "%b %-d, %Y" }} </p>
-      <h2 class="featured-post-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a></h2>
-      <p class="featured-post-tagline"> {{post.tagline}} </p>
-      <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read more <strong>→ </strong></a>
-    </div>
-    {% if post.image %}
-    <div class="featured-post-image" style="background-image:url({{site.url}}{{site.baseurl}}/images/{{post.image}});">
-      {% else %}
-      <div class="featured-post-image" style="background-image:url({{site.url}}/images/welcome.jpg);">
-        {% endif %}
-        <a class="rainbow-polythene" href="{{ post.url | prepend: site.baseurl }}"> </a>
+<header class="wo2-header">
+    <a class="wo2-logo" href="{{ site.baseurl }}/">
+      {% include logo.html %}
+    </a>
+</header>
+<div class="wo2-cover" {% if post.image %} style="background-image:url(/images/{{post.image}});"{% endif %}>
+      
+      <h2 class="wo2-cover-title" > 
+        <a href="{{ post.url | prepend: site.baseurl }}" style="color:{{post.color}} ">{{ post.title }} </a>
+      </h2>
+      <p class="wo2-cover-tagline" style="color:{{post.color}}"> 
+        {{post.tagline}} 
+      </p>
+      
+      <div class="cover-btns">
+        <a class="secondary-btn secondary-btn-{{post.colorType}}" href="{{ post.url | prepend: site.baseurl }}">More Posts <strong>↓</strong></a>
+        <a class="primary-btn" href="{{ post.url | prepend: site.baseurl }}">Read Post </a>
       </div>
-  </div>
-{% include subscription.html %}
+      
+
+      
+</div>

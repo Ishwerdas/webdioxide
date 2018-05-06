@@ -4,7 +4,7 @@ layout: post
 date: '2016-8-18 00:08:19 +0530'
 categories: links
 author: Ishwerdas
-image: notes.jpg
+image: javascript-2.jpg
 permalink: /javascript/data-structures-using-javascript-arrays.html
 comments: true
 title: Arrays Using Javascript

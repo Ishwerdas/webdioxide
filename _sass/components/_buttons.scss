@@ -1,0 +1,35 @@
+.btn{
+    color:$text-color;
+    text-transform:uppercase;
+    border-radius:100px;
+    letter-spacing:1px;
+    box-shadow:2px 2px 1px rgba(0,0,0,0.2);
+    padding:5px 1rem;
+    border:1px solid $white;
+    transition:$slow-transition;
+    &:hover {
+        border: 1px solid $default-focal;
+        background:$default-focal;
+        color:$text-color;
+    }
+}
+
+.primary-btn{
+    @extend .btn;
+    background:white;
+}
+
+.secondary-btn{
+    @extend .btn;
+    border:1px solid $text-color;
+}
+
+.secondary-btn-light{
+    @extend .btn;
+    background-color: rgba(white,0.5);
+    border:1px dashed transparent;
+    &:hover{
+        background:white;
+        border: 1px solid transparent;
+    }
+}

@@ -1,0 +1,24 @@
+$pitchBlack:#000;
+$black:#333;
+$lightBlack:#555;
+$white:#fff;
+$yellow:#f1c40f;
+
+$text-color:$black;
+$default-focal:$yellow;
+
+$font-size:20px; 
+
+$focal-font:'Poppins', helvetica, tahoma, arial, sans-serif;
+$accent-font:'Rasa', Times New Roman, serif;
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+$slow-transition:1s all ease;
+$transition:0.5s all ease;
+
+$mobile:500px;
+$tablet:1024px;

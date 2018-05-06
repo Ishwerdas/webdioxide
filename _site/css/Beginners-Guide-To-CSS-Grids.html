@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Beginner's Guide to Using CSS Grids.</title>
+  <meta name="description" content="You know what, I am a big fan of Richard Fyenman’s technique  of reducing everything to freshman level. I believe as he did, that if you are unable to explai...">
+  <link href="https://fonts.googleapis.com/css?family=Rasa:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:8080/css/Beginners-Guide-To-CSS-Grids.html">
+  <link rel="alternate" type="application/rss+xml" title="Webdioxide" href="http://0.0.0.0:8080/feed.xml">
+</head>
+
+  
+
+  <body>
+        <main>
+<aside class="post-bar" style="background-image:url('/images/grids.jpg')"> </aside>
+
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header" >
+    <h1 class="post-title" itemprop="name headline">A Beginner's Guide to Using CSS Grids.</h1>
+  </header>
+  
+  
+  
+  
+  <div class="post-content">
+    <div class="content-wrapper">
+  <p>You know what, I am a big fan of Richard Fyenman’s technique  of reducing everything to freshman level. I believe as he did, that if you are unable to explain a concept in simplest words you don’t really understand it.</p>
+
+<p>Addition of Grids in CSS spec is something that would change every course that’s taught on web development. CSS Grids is relatively new but as fundamental a concept as say box model. So let’s try teaching it without assuming any CSS expertise from audience.</p>
+
+<h2 id="what-are-grids">What are grids?</h2>
+
+<p>Grid in its most simplest terms is rows and columns. Horizontal and vertical lines that divide the page, canvas or in our context screen into equal boxes. Grids provide rhythm to our design. Human mind loves symmetry, so when it sees symmetry it likes symmetry and hence finds a symmetric design aesthetically pleasing a.k.a good looking.</p>
+
+<p>You can <a href="https://webdesign.tutsplus.com/articles/a-comprehensive-introduction-to-grids-in-web-design--cms-26521">learn more about grids here</a></p>
+
+<h2 id="before-grids-were-introduced-into-css">Before Grids were introduced into CSS</h2>
+
+<p>In the ancient times (a year ago) we did not have grids in CSS. In the pre-historic times (couple of years ago) we had to rely on 3rd party grid frameworks for building grid based layouts. These frameworks bloated our markup (html) or added extra burden on the site. Then came the <a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">flexbox</a>. It somewhat allowed us to have grids but that was more of a hack than a solution. Using flexbox as a grid layout can be arguably considered as an improper use of flexbox. Well, we don’t have to argue on that anymore because we have grids built in CSS Now.</p>
+
+<h2 id="shut-up-and-show-me-how">Shut up! and show me how</h2>
+
+<h3 id="step-1-make-a-container">Step 1: Make a container</h3>
+<p>Before you can add rows and columns, you need a container to contain those rows and columns. You do that by adding <code class="highlighter-rouge">display:grid</code> to your container element.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;main class="container"&gt;
+  &lt;div class='cell'&gt; 1 &lt;/div&gt;
+  &lt;div class='cell'&gt; 2 &lt;/div&gt;
+  &lt;div class='cell'&gt; 3 &lt;/div&gt;
+  &lt;div class='cell'&gt; 4 &lt;/div&gt;
+  &lt;div class='cell'&gt; 5 &lt;/div&gt;
+  &lt;div class='cell'&gt; 6 &lt;/div&gt;
+  &lt;div class='cell'&gt; 7 &lt;/div&gt;
+  &lt;div class='cell'&gt; 8 &lt;/div&gt;
+  &lt;div class='cell'&gt; 9 &lt;/div&gt;
+  &lt;div class='cell'&gt; 10 &lt;/div&gt;
+  &lt;div class='cell'&gt; 11 &lt;/div&gt;
+  &lt;div class='cell'&gt; 12 &lt;/div&gt;
+  &lt;div class='cell'&gt; 13 &lt;/div&gt;
+  &lt;div class='cell'&gt; 14 &lt;/div&gt;
+  &lt;div class='cell'&gt; 15 &lt;/div&gt;
+  &lt;div class='cell'&gt; 16 &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.container {
+    display:grid;
+  }
+</code></pre>
+</div>
+<p data-height="265" data-theme-id="dark" data-slug-hash="rwZXoe" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 1" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/rwZXoe/">Beginner's Guide to CSS Grids - Step 1</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h3 id="step-2-create-rows-and-columns">Step 2: Create Rows and Columns</h3>
+<p>Now we have grid, let’s tell it the number and size of columns.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.container {
+  display:grid;
+  
+  /* Create 4 columns of 100px each */
+  grid-template-columns:100px 100px 100px 100px;
+  
+}
+</code></pre>
+</div>
+<p>So as its obvious from the code, you use <code class="highlighter-rouge">grid-template-columns</code> to create columns and the extra columns (5 - 16) automatically gets arranged into rows. Pretty neat, eh?</p>
+
+<p>This property of CSS grids to automatically create rows for you when you don’t explicitly define those rows in your css, that’s called <strong>implicit grid</strong>. Not just rows, implicit grid can also add implicit columns for you. By default the property <code class="highlighter-rouge">grid-auto-flow</code> is <code class="highlighter-rouge">row</code>, however if you change it to <code class="highlighter-rouge">column</code> instead of creating implicit rows it would create implicit columns.</p>
+
+<p>In contrast, the grid that we define in css that’s <strong>explicit grid</strong>.</p>
+
+<p>Let’s add the rows now , <strong>explicitly</strong>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+
+  /* Create 4 rows, first one with height of 50px 
+   * &amp; rest of them adjusting their height to content 
+   */
+  grid-template-rows: 50px auto 100px;  
+ } 
+</code></pre>
+</div>
+<p data-height="265" data-theme-id="dark" data-slug-hash="owPKKp" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 2.1" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/owPKKp/">Beginner's Guide to CSS Grids - Step 2.1</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Just like <code class="highlighter-rouge">grid-template-columns</code> , <code class="highlighter-rouge">grid-template-rows</code> add explicit rows to grid. The auto value makes it adjust the height of content. Still cells 14 - 16 are in an implicit row. There’s a way you can target implicit rows in css called <code class="highlighter-rouge">grid-auto-rows</code>. Let’s try that.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+  grid-template-rows: 50px auto 100px;  
+  
+  grid-auto-rows: 150px;
+}  
+</code></pre>
+</div>
+<p data-height="265" data-theme-id="dark" data-slug-hash="YQOmmL" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 2.2" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/YQOmmL/">Beginner's Guide to CSS Grids - Step 2.2</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h3 id="step-3-add-gutter">Step 3: Add Gutter</h3>
+<p>Beside rows and columns, most grids have third thing called gutters. Gutters are the gap between 2 adjacent rows or 2 adjacent columns.</p>
+
+<p><code class="highlighter-rouge">grid-column-gap</code> and <code class="highlighter-rouge">grid-row-gap</code> to the rescue.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+  grid-template-rows: 50px auto 100px;  
+  grid-auto-rows: 150px;
+  
+  grid-column-gap:20px;
+  grid-row-gap:20px;
+}
+</code></pre>
+</div>
+<p>If you want same gap on rows as in columns, there’s a shorthand that you can use called <code class="highlighter-rouge">grid-gap</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+  grid-template-rows: 50px auto 100px;  
+  grid-auto-rows: 150px;
+  
+  grid-gap:20px;
+}
+</code></pre>
+</div>
+<p data-height="265" data-theme-id="dark" data-slug-hash="qjJWWP" data-default-tab="result" data-user="inderpreetsingh" data-embed-version="2" data-pen-title="Beginner's Guide to CSS Grids - Step 3" class="codepen">See the Pen <a href="https://codepen.io/inderpreetsingh/pen/qjJWWP/">Beginner's Guide to CSS Grids - Step 3</a> by Inder Singh (<a href="https://codepen.io/inderpreetsingh">@inderpreetsingh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>By this knowledge you can create a basic grid, and using media queries even a flexible grid for yourself. However that’s just surface of what grids have to offer. There are whole bunch of <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">other properties</a> that you can use to manipulate grids. If time allowed, I will create more posts about it and link them down under.</p>
+
+    <p class="post-meta">
+      <time datetime="2017-07-07T18:38:19+00:00" itemprop="datePublished">Jul 7, 2017</time>
+       • 
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Ishwerdas</span>
+      </span>
+    </p>
+    
+  <div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+var disqus_config = function () {
+this.page.identifier = "/css/Beginners-Guide-To-CSS-Grids"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//webdioxide.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+  <div class="subscription-form">
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="//ishwerdas.us12.list-manage.com/subscribe/post?u=8fe535baf9aa31d75654e5bd5&amp;id=37583f7d93" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+
+    <p class="special-text">  Hi, this is <strong> Webdioxide.com </strong> </p>
+    <p>  Get great content straight in your inbox, subscribe us. </p>
+	<input type="email" placeholder="Your Email" name="EMAIL" class="required email" id="mce-EMAIL">
+	<span id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</span>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8fe535baf9aa31d75654e5bd5_37583f7d93" tabindex="-1" value=""></div>
+    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</div>
+</form>
+</div>
+
+</div>
+
+  
+  </div>
+</div>
+</article>
+</main>
+    <footer class="site-footer">
+
+<!--  <div class="wrapper">
+
+    <h2 class="footer-heading">Webdioxide</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Webdioxide</li>
+          <li><a href="mailto:singhs.ishwer@gmail.com">singhs.ishwer@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/inderpreetsingh"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">inderpreetsingh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/webdioixde_original"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">webdioixde_original</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>A blog built by Ishwerdas Studio
+</p>
+      </div>
+    </div>
+
+  </div>-->
+
+</footer>
+
+  </body>
+</html>

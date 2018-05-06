@@ -4,9 +4,10 @@ layout: post
 date: '2016-8-30 00:08:19 +0530'
 categories: links
 author: Shaina Sabarwal
-image: notes.jpg
+image: meteor-n-android.jpg
 permalink: /meteor-app-on-android-device
 comments: true
+color: '#ffffff'
 title: Running My Meteor App on Android Device
 ---
 

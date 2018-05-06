@@ -4,7 +4,7 @@ layout: post
 date: '2016-10-08 00:08:19 +0530'
 categories: links
 author: Ishwerdas
-image: notes.jpg
+image: javascript.jpg
 permalink: /javascript/why-typeof-null-returns-object-the-history
 comments: true
 title: History behind typeof null equals object.

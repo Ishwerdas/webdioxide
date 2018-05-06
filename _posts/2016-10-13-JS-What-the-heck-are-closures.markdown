@@ -4,7 +4,7 @@ layout: post
 date: '2016-10-13 13:07:22 +0530'
 categories: javascript
 author: Ishwerdas
-image: closures.jpg
+image: closure.jpg
 permalink: /javascript/what-are-closures
 comments: true
 title: What are closures?.

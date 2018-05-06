@@ -4,7 +4,7 @@ title:  "Why we need Intrusion Detection System?"
 date:   2013-2-23 00:08:19 +0530
 categories: lectures
 author: Ishwerdas
-image: ids.jpg
+image: intrusion-detection-system.jpg
 permalink: "/lectures/:title.html"
 comments: true
 ---

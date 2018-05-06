@@ -4,91 +4,795 @@
     <title>Webdioxide</title>
     <description>A blog built by Ishwerdas Studio
 </description>
-    <link>http://webdioxide.com/</link>
-    <atom:link href="http://webdioxide.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Jan 2016 18:03:33 +0530</pubDate>
-    <lastBuildDate>Sat, 09 Jan 2016 18:03:33 +0530</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>http://0.0.0.0:8080/</link>
+    <atom:link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 06 May 2018 15:06:59 +0000</pubDate>
+    <lastBuildDate>Sun, 06 May 2018 15:06:59 +0000</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>I love kittens, as it</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>A Beginner's Guide to Using CSS Grids.</title>
+        <description>&lt;p&gt;You know what, I am a big fan of Richard Fyenman’s technique  of reducing everything to freshman level. I believe as he did, that if you are unable to explain a concept in simplest words you don’t really understand it.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Addition of Grids in CSS spec is something that would change every course that’s taught on web development. CSS Grids is relatively new but as fundamental a concept as say box model. So let’s try teaching it without assuming any CSS expertise from audience.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;what-are-grids&quot;&gt;What are grids?&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Grid in its most simplest terms is rows and columns. Horizontal and vertical lines that divide the page, canvas or in our context screen into equal boxes. Grids provide rhythm to our design. Human mind loves symmetry, so when it sees symmetry it likes symmetry and hence finds a symmetric design aesthetically pleasing a.k.a good looking.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&quot;https://webdesign.tutsplus.com/articles/a-comprehensive-introduction-to-grids-in-web-design--cms-26521&quot;&gt;learn more about grids here&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;before-grids-were-introduced-into-css&quot;&gt;Before Grids were introduced into CSS&lt;/h2&gt;
+
+&lt;p&gt;In the ancient times (a year ago) we did not have grids in CSS. In the pre-historic times (couple of years ago) we had to rely on 3rd party grid frameworks for building grid based layouts. These frameworks bloated our markup (html) or added extra burden on the site. Then came the &lt;a href=&quot;https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties&quot;&gt;flexbox&lt;/a&gt;. It somewhat allowed us to have grids but that was more of a hack than a solution. Using flexbox as a grid layout can be arguably considered as an improper use of flexbox. Well, we don’t have to argue on that anymore because we have grids built in CSS Now.&lt;/p&gt;
+
+&lt;h2 id=&quot;shut-up-and-show-me-how&quot;&gt;Shut up! and show me how&lt;/h2&gt;
+
+&lt;h3 id=&quot;step-1-make-a-container&quot;&gt;Step 1: Make a container&lt;/h3&gt;
+&lt;p&gt;Before you can add rows and columns, you need a container to contain those rows and columns. You do that by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;display:grid&lt;/code&gt; to your container element.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;main class=&quot;container&quot;&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 1 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 2 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 3 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 4 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 5 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 6 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 7 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 8 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 9 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 10 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 11 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 12 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 13 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 14 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 15 &amp;lt;/div&amp;gt;
+  &amp;lt;div class='cell'&amp;gt; 16 &amp;lt;/div&amp;gt;
+&amp;lt;/main&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
+    display:grid;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;rwZXoe&quot; data-default-tab=&quot;result&quot; data-user=&quot;inderpreetsingh&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Beginner's Guide to CSS Grids - Step 1&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/inderpreetsingh/pen/rwZXoe/&quot;&gt;Beginner's Guide to CSS Grids - Step 1&lt;/a&gt; by Inder Singh (&lt;a href=&quot;https://codepen.io/inderpreetsingh&quot;&gt;@inderpreetsingh&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;step-2-create-rows-and-columns&quot;&gt;Step 2: Create Rows and Columns&lt;/h3&gt;
+&lt;p&gt;Now we have grid, let’s tell it the number and size of columns.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
+  display:grid;
+  
+  /* Create 4 columns of 100px each */
+  grid-template-columns:100px 100px 100px 100px;
+  
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;So as its obvious from the code, you use &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-template-columns&lt;/code&gt; to create columns and the extra columns (5 - 16) automatically gets arranged into rows. Pretty neat, eh?&lt;/p&gt;
+
+&lt;p&gt;This property of CSS grids to automatically create rows for you when you don’t explicitly define those rows in your css, that’s called &lt;strong&gt;implicit grid&lt;/strong&gt;. Not just rows, implicit grid can also add implicit columns for you. By default the property &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-auto-flow&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;row&lt;/code&gt;, however if you change it to &lt;code class=&quot;highlighter-rouge&quot;&gt;column&lt;/code&gt; instead of creating implicit rows it would create implicit columns.&lt;/p&gt;
+
+&lt;p&gt;In contrast, the grid that we define in css that’s &lt;strong&gt;explicit grid&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s add the rows now , &lt;strong&gt;explicitly&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+
+  /* Create 4 rows, first one with height of 50px 
+   * &amp;amp; rest of them adjusting their height to content 
+   */
+  grid-template-rows: 50px auto 100px;  
+ } 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;owPKKp&quot; data-default-tab=&quot;result&quot; data-user=&quot;inderpreetsingh&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Beginner's Guide to CSS Grids - Step 2.1&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/inderpreetsingh/pen/owPKKp/&quot;&gt;Beginner's Guide to CSS Grids - Step 2.1&lt;/a&gt; by Inder Singh (&lt;a href=&quot;https://codepen.io/inderpreetsingh&quot;&gt;@inderpreetsingh&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Just like &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-template-columns&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-template-rows&lt;/code&gt; add explicit rows to grid. The auto value makes it adjust the height of content. Still cells 14 - 16 are in an implicit row. There’s a way you can target implicit rows in css called &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-auto-rows&lt;/code&gt;. Let’s try that.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+  grid-template-rows: 50px auto 100px;  
+  
+  grid-auto-rows: 150px;
+}  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;YQOmmL&quot; data-default-tab=&quot;result&quot; data-user=&quot;inderpreetsingh&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Beginner's Guide to CSS Grids - Step 2.2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/inderpreetsingh/pen/YQOmmL/&quot;&gt;Beginner's Guide to CSS Grids - Step 2.2&lt;/a&gt; by Inder Singh (&lt;a href=&quot;https://codepen.io/inderpreetsingh&quot;&gt;@inderpreetsingh&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;step-3-add-gutter&quot;&gt;Step 3: Add Gutter&lt;/h3&gt;
+&lt;p&gt;Beside rows and columns, most grids have third thing called gutters. Gutters are the gap between 2 adjacent rows or 2 adjacent columns.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;grid-column-gap&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-row-gap&lt;/code&gt; to the rescue.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+  grid-template-rows: 50px auto 100px;  
+  grid-auto-rows: 150px;
+  
+  grid-column-gap:20px;
+  grid-row-gap:20px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;If you want same gap on rows as in columns, there’s a shorthand that you can use called &lt;code class=&quot;highlighter-rouge&quot;&gt;grid-gap&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
+  display:grid;
+  grid-template-columns:100px 100px 100px 100px;
+  grid-template-rows: 50px auto 100px;  
+  grid-auto-rows: 150px;
+  
+  grid-gap:20px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;dark&quot; data-slug-hash=&quot;qjJWWP&quot; data-default-tab=&quot;result&quot; data-user=&quot;inderpreetsingh&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Beginner's Guide to CSS Grids - Step 3&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/inderpreetsingh/pen/qjJWWP/&quot;&gt;Beginner's Guide to CSS Grids - Step 3&lt;/a&gt; by Inder Singh (&lt;a href=&quot;https://codepen.io/inderpreetsingh&quot;&gt;@inderpreetsingh&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;By this knowledge you can create a basic grid, and using media queries even a flexible grid for yourself. However that’s just surface of what grids have to offer. There are whole bunch of &lt;a href=&quot;https://css-tricks.com/snippets/css/complete-guide-grid/&quot;&gt;other properties&lt;/a&gt; that you can use to manipulate grids. If time allowed, I will create more posts about it and link them down under.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Dec 2015 17:49:19 +0530</pubDate>
-        <link>http://webdioxide.com/i-love-kittens-as-it.html</link>
-        <guid isPermaLink="true">http://webdioxide.com/i-love-kittens-as-it.html</guid>
+        <pubDate>Fri, 07 Jul 2017 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/css/Beginners-Guide-To-CSS-Grids.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/css/Beginners-Guide-To-CSS-Grids.html</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>css</category>
         
       </item>
     
       <item>
-        <title>Another post for me</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>What are closures?.</title>
+        <description>&lt;p&gt;&lt;strong&gt;Work in progress&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Javascript is weirdly awesome.Closures in javascript are one of those things that would make your brain swoon over its weirdness, over it’s mild yet intriguing complexity. Closure is a way to remember function’s variables even after that function has finished running.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;Let’s get into code&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function greet(greeting) {
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+  function noun(name) {
+    return greeting + &quot;  &quot; + name +&quot;!&quot;;
+  }
 
+  return noun;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now the &lt;code class=&quot;highlighter-rouge&quot;&gt;noun&lt;/code&gt; that’s returned from &lt;code class=&quot;highlighter-rouge&quot;&gt;greet&lt;/code&gt; is said to have closure over variable &lt;code class=&quot;highlighter-rouge&quot;&gt;greeting&lt;/code&gt;. In simple terms it will remember whatever we pass as &lt;code class=&quot;highlighter-rouge&quot;&gt;greeting&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;greet(greeting)&lt;/code&gt;. Let’s clarify that with an example.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
+the noun that's returned from greet remembers the greeting that we pass to greet. 
+We are storing that noun inside different variables here.
+*/
+var helloGreet = greet('hello');
+var holaGreet = greet('hola');
+
+/**
+Now helloGreet and holaGreet are kind of noun functions in disguise. 
+So we can pass them their intended argument a.k.a the variable `name` to it.
+*/
+
+helloGreet('inder'); // hello inder
+holaGreet('gaurav'); // hola gaurav
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A bit confusing isn’t it?&lt;/p&gt;
+
+&lt;p&gt;It’s supposed to be. Don’t worry practice them a bit, and stay tuned for more explanation.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Dec 2015 17:49:19 +0530</pubDate>
-        <link>http://webdioxide.com/another-post-for-me.html</link>
-        <guid isPermaLink="true">http://webdioxide.com/another-post-for-me.html</guid>
+        <pubDate>Thu, 13 Oct 2016 07:37:22 +0000</pubDate>
+        <link>http://0.0.0.0:8080/javascript/what-are-closures</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/javascript/what-are-closures</guid>
         
         
-        <category>jekyll</category>
+        <category>javascript</category>
         
       </item>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>History behind typeof null equals object.</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Javascript is undoubtedly bit weird at times. However for me, that’s what makes it special. 
+Javascript has 6 or 7 (depending upon how you count) primitive types. They are&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;string&lt;/li&gt;
+  &lt;li&gt;number&lt;/li&gt;
+  &lt;li&gt;boolean&lt;/li&gt;
+  &lt;li&gt;object&lt;/li&gt;
+  &lt;li&gt;symbol (new in es6)&lt;/li&gt;
+  &lt;li&gt;Null and undefined&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Now if you have met javascript before, you know that her variables don’t have a type. It’s the value that has a type. To find that type we use &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var u;
+typeof u; //undefined
+
+var a = &quot;inder&quot;;
+typeof a;  // string
+
+var b =  true;
+typeof b; //boolean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;However if you run &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof&lt;/code&gt; on a null value, it returns &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt;, something you won’t expect from a primitive type.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var i = NULL;
+typeof i; //object 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is a &lt;strong&gt;bug&lt;/strong&gt; that exists since the beginning of javascript. The reason that this bug exists is simple. Each javascript value has a type tag. First 1-3 bits of each value are reserved for it’s type. The type tags for different types were as follows: -&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;000 - object&lt;/li&gt;
+  &lt;li&gt;001 - int&lt;/li&gt;
+  &lt;li&gt;010 - double&lt;/li&gt;
+  &lt;li&gt;100 - string&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;110 - boolean&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;To define &lt;strong&gt;undefined&lt;/strong&gt; they used a special number 2 &lt;sup&gt;-30&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;To define &lt;strong&gt;null&lt;/strong&gt; NULL pointer was used.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After the type tage folows the actual value. &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof&lt;/code&gt; got confused between zeros of null pointer and 000 tag of object and thus the bug.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-isnt-this-bug-removed&quot;&gt;Why isn’t this bug removed?&lt;/h2&gt;
+
+&lt;p&gt;It would have been removed in EcmaScript 6, but the proposal got rejected because of a lot of old javascript code that relies on it. So for now, we are stuck with it.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Oct 2016 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/javascript/why-typeof-null-returns-object-the-history</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/javascript/why-typeof-null-returns-object-the-history</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
+    
+      <item>
+        <title>Running My Meteor App on Android Device</title>
+        <description>&lt;p&gt;Working in meteor is already super easy and a bliss. I have worked in meteor before, but this time, I wanted to use one of the best features of meteor that is making a cross platform application. 
+So the challenge here was to run and install my meteor app in my Xiaomi Redmi Note 3 Android (version Lollipop) phone.&lt;/p&gt;
+
+&lt;p&gt;Let’s see how I did that.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-installing-meteor&quot;&gt;1. Installing Meteor&lt;/h4&gt;
+
+&lt;p&gt;Connect your computer with Internet and run this command in terminal&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; curl https://install.meteor.com/ | sh &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Linux curl will download meteor installation script and linux sh command is used to run that script.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-create-new-meteor-project&quot;&gt;2. Create new Meteor project&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; meteor create piaoma &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Meteor will create a project named piaoma having two folders Clients and Server and a package.json file. Explaining what these are about are out of scope of this post. You can anyway learn development in Meteor from https://guide.meteor.com/index.html&lt;/p&gt;
+
+&lt;p&gt;Now I wanted to run and install this project piaoma at my Android phone.
+For this, I followed the Meteor guide https://guide.meteor.com/mobile.html#installing-prerequisites&lt;/p&gt;
+
+&lt;p&gt;To run your meteor application inside your android device, you need first to add android platform&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; meteor add-platform android &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;But, it will require you to install some prerequisites including JDK (Java Development Kit) and Android Studio.&lt;/p&gt;
+
+&lt;p&gt;I am working in Ubuntu, so I preferred to use Ubuntu make as it installed JDK and Android Studio both easily just by using a few commands.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Add ubuntu make ppa first&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update your system&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; sudo apt-get update &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Install Ubuntu make&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; sudo apt-get install ubuntu-make &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Run umake to install android&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; umake android &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next step is Setting &lt;strong&gt;ANDROID_HOME&lt;/strong&gt; and adding the tools directories to your &lt;strong&gt;PATH&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you see the guide, the path to Sdk that is to be put into &lt;strong&gt;ANDRIOD_HOME&lt;/strong&gt; variable is ~/Library/Android/sdk, but Ubuntu-make made Android folder in my home folder and so the path that I had to store in ANDROID_HOME is “/home/shaina/Android/Sdk” , where ‘shaina’ is my username&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;export ANDROID_HOME=”/home/shaina/Android/Sdk”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I added above two lines in .bashrc file which resides in my home. To do that, just open the &lt;strong&gt;.bashrc&lt;/strong&gt; file (I use vim as editor)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo vim ~/.bashrc &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and add those lines at the last of the file.
+Save and Quit&lt;/p&gt;
+
+&lt;p&gt;Then Reload .bashrc (by executing source ~/.bashrc)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; source ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;When I tried to run my project by&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; cd ~/piaoma &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; meteor run android-device &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It asked me to install android-target: android 23 using SDK manager.
+It is given in the hint, how to run sdk manager, as shown in screenshot below&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/images/terminal.png&quot; alt=&quot;Terminal Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just go inside the &lt;strong&gt;Android/Sdk/tools&lt;/strong&gt; and run android&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; cd ~/Android/Sdk/tools &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; ./android &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Sdk manager dialog box opened up. Just select and install the SDK tools you require. 
+&lt;img src=&quot;http://0.0.0.0:8080/images/sdkManager.png&quot; alt=&quot;SDK Manager&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is showing status installed in this screenshot as I just installed Android API 23.&lt;/p&gt;
+
+&lt;h3 id=&quot;connect-your-phone-before-running-the-app-again&quot;&gt;Connect your phone before running the app again.&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connect your android device to your computer through USB.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enable the USB debugging from Developer options settings into your android device. On Android 4.2 and higher, the Developer options screen is hidden by default. To make it visible, go to Settings &amp;gt; About phone and tap Build number seven times. Return to the previous screen to find Developer options at the bottom.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;(At my phone Xiaomi Redmi Note 3, nothing happened by tapping on Build Number seven times, after few searches, I came to know how to get to Developers options. Go to Settings &amp;gt; About phone and tap MIUI version seven times. Go to Settings &amp;gt; Additional Settings and you will find Developers Options. Open it and Enable USB debugging.)
+Found this from http://xiaomiadvices.com/miui-7-enable-developer-options-and-usb-debugging-on-xiaomi-android-phones/&lt;/p&gt;
+
+&lt;p&gt;If you’re developing on Ubuntu Linux, you need to add a udev rules file that contains a USB configuration for each type of device you want to use for development. In the rules file, each device manufacturer is identified by a unique vendor ID, as specified by the ATTR{idVendor} property.
+Log in as root and create this file: /etc/udev/rules.d/51-android.rules.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; sudo vim /etc/udev/rules.d/51-android.rules &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Use this format to add each vendor to the file:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;2717&quot;, MODE=&quot;0666&quot;, GROUP=&quot;plugdev&quot; &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;2717 is the vendorID of XIAOMI, you can search vendorID of your device online easily.&lt;/p&gt;
+
+&lt;p&gt;Now execute:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; sudo chmod a+r /etc/udev/rules.d/51-android.rules &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now run the app, Go to your project&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; cd piaoma &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; meteor run android-device &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will install and run your app into your android device.&lt;/p&gt;
+
+&lt;p&gt;Thank you :)&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 30 Dec 2015 17:49:19 +0530</pubDate>
-        <link>http://webdioxide.com/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://webdioxide.com/welcome-to-jekyll.html</guid>
+        <pubDate>Mon, 29 Aug 2016 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/meteor-app-on-android-device</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/meteor-app-on-android-device</guid>
         
         
-        <category>jekyll</category>
+        <category>links</category>
         
-        <category>update</category>
+      </item>
+    
+      <item>
+        <title>Virtual Reality Arriving Fast</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Microsoft Hololens experience showcase opens for developers in New York.&lt;/li&gt;
+  &lt;li&gt;Facebook is hiring a News and Media Content Lead for Oculus Rift.&lt;/li&gt;
+  &lt;li&gt;A GearVR puzzle game E2per Review by VRift&lt;/li&gt;
+  &lt;li&gt;Google reveals the plans for new VR headset and motion controller.&lt;/li&gt;
+  &lt;li&gt;The WaveVR raises $2.5 million to mix music and virtual reality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have ever heard such news, you would be wondering that every big company is stepping into 3-Dimensional VR interfaces. They are making hardware like head sets, apps, platforms to develop apps, having conferences, funding, and a lot.&lt;/p&gt;
+
+&lt;p&gt;So, first let’s learn, what is this all hype about?&lt;/p&gt;
+
+&lt;h4 id=&quot;what-is-that-we-call-virtual-reality&quot;&gt;What is that we call Virtual Reality?&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Virtual Reality&lt;/strong&gt; is a computer technology that simulates user’s presence and environment for interactions that includes, sight, touch, hearing and smell, to create a lifelike experience.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-is-it-evolved&quot;&gt;How is it evolved?&lt;/h4&gt;
+
+&lt;p&gt;Remember that red and green glasses we used to see 3D images in our childhood? Those are known as &lt;strong&gt;Anaglyph 3D glasses&lt;/strong&gt; which were used to create stereoscopic 3D effect. When views through the color-coded anaglyph glasses, each of the two differently filtered colored images reaches the eye it’s intended for, revealing a 3D image in front of your eyes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/images/colored3d.jpg&quot; alt=&quot;Anaglyph 3D Glasses&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After Anaglyph glasses, polarized 3D glasses came into use, to watch 3D animated movies or 3D games. In polarized 3D system, two images are projected superimposed onto the same screen and polarization glasses are used to create the illusion of 3D images.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/images/fluidglasses.jpg&quot; alt=&quot;Polarized 3D Glasses&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, to have a super interactive virtual reality experience, companies are making interfaces like Oculus Rift, Samsung GearVR etc, but these are not so affordable yet.
+Google has also made a low level alternative to Oculus Rift at very affordable rate, known as Google Cardboard, so that everyone can experience VR today.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/images/googlecardboard.jpg&quot; alt=&quot;Google Cardboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;how-we-see-things-in-3d-around-us-in-real-world&quot;&gt;How we see things in 3D around us in real world?&lt;/h4&gt;
+
+&lt;p&gt;As our eyes sit side by side, each eye captures a slightly different view of an object. This is called &lt;strong&gt;binocular vision&lt;/strong&gt;. When signals from the two eyes reach the brain, they are superimposed and processed into a single picture with depth. As a result, we get a 3D picture and are able to judge distances well.&lt;/p&gt;
+
+&lt;p&gt;This is the concept from where the virtual reality get inspired from.&lt;br /&gt;
+Developers of VR apps make two different images or models of same object placed at angles that are slightly different from each other, one for each eye. Then we have to use a VR hardware like Google Cardboard or Oculus Rift to have 3D view of that image or model.&lt;/p&gt;
+
+&lt;p&gt;From all this above, we come to know that the next interface that is approaching fast is VR interfaces. Developers will be in need to make the sites and apps responsive for these interfaces too, as today they do for mobiles and tablets.&lt;/p&gt;
+
+&lt;p&gt;So to have a good taste of developing VR apps, I used A-frame.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-is-a-frame&quot;&gt;What is &lt;a href=&quot;https://aframe.io/&quot;&gt;A-frame&lt;/a&gt;?&lt;/h4&gt;
+
+&lt;p&gt;A-frame is an open-source framework for creating 3D and virtual reality experiences on the web. It’s like the bread to your sandwich, which will provide you with some ready made entities that you can use to make interesting applications. VR scenes created by A-frame work across desktop, oculus rift, mobiles, Google cardboard with just HTML.&lt;/p&gt;
+
+&lt;p&gt;A-frame is powered by &lt;a href=&quot;http://threejs.org/&quot;&gt;three.js&lt;/a&gt; and &lt;a href=&quot;https://webvr.info/&quot;&gt;WebVR&lt;/a&gt;. Three.js is a javascript library that is used to create 3D scenes and WebVR is another javascript API that provides access to the VR devices such as Oculus Rift, Google Cardboard etc.&lt;/p&gt;
+
+&lt;p&gt;To make a 3D scene in a-frame, you just need to make an HTML file, add a-frame script in the &amp;lt;head&amp;gt; and add entities you want in the &amp;lt;body&amp;gt;.&lt;/p&gt;
+
+&lt;p&gt;For Example, to make a box, the code in a-frame will look like this.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;aframe.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;a-scene&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;a-box&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0 1 0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a-box&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a-scene&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 22 Aug 2016 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/vr/virtual-reality-and-aframe.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/vr/virtual-reality-and-aframe.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
+    
+      <item>
+        <title>Arrays Using Javascript</title>
+        <description>&lt;p&gt;**Data Structures using Javascript - Arrays **&lt;/p&gt;
+
+&lt;p&gt;In programming we have something called variables. You can think of a variable as a named box and you can put stuff in it. Sometimes we need to put a bunch of related boxes in a bigger box, that’s where arrays come into scene.&lt;/p&gt;
+
+&lt;p&gt;Arrays can also be thought of as list containing homogenous list items. By homogenous I mean, of the same &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Data_structures&quot; title=&quot;datatype&quot;&gt;datatype&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-a-new-array&quot;&gt;Create a new array&lt;/h3&gt;
+
+&lt;p&gt;Creating an array is simple. Syntax is almost similar to that of creating a variable, just that a list of comma separated items are enlosed in square brackets &lt;code class=&quot;highlighter-rouge&quot;&gt;[  ]&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var cars = ['lambohrgini' , 'audi' , 'mercedes' , 'datsun'];
+var years = [1990, 1992, 1985, 1984, 1947] ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also create array using &lt;code class=&quot;highlighter-rouge&quot;&gt;new Array()&lt;/code&gt; method. To do that&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var arr = new Array(1,2,3,4);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;accessing-a-particular-element-of-array-index&quot;&gt;Accessing a particular element of array (index)&lt;/h3&gt;
+
+&lt;p&gt;Each element of array has an index. The indices start from 0.  You can access each element of array using arrayname followed by it’s index in square brackets.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var cars = ['lambohrgini' , 'audi' , 'mercedes' , 'datsun'];
+var years = [1990, 1992, 1985, 1984, 1947] ;
+alert(cars[0]); // will alert lambohrgini
+alert(cars[2]); // will alert mercedes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;In javascript we can have named indices too, which is discussed later.&lt;/p&gt;
+
+&lt;p&gt;There are three basic operations that one can perform on array&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Traversing&lt;/strong&gt; an array&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Insert&lt;/strong&gt; an element into array&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Remove&lt;/strong&gt; an element from array&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;traversing-an-array&quot;&gt;Traversing an array&lt;/h3&gt;
+
+&lt;p&gt;Traversing an array means, visiting each element of array one by one and then performing a certain operation on it.&lt;/p&gt;
+
+&lt;p&gt;We need to use a loop to access each element of array. There are &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration&quot; title=&quot;bunch of loops&quot;&gt;bunch of loops&lt;/a&gt; in Javascript, we will be using basic &lt;code class=&quot;highlighter-rouge&quot;&gt;for loop&lt;/code&gt; for traversing. For loops exists in almost all the high level languages, so you can make use of this guide even if you are not that into Javascript.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var friends = ['jane', 'mary', 'valerie', 'stephanie', 'carol']
+for(i = 0; i &amp;lt; 5; i++) {
+    alert(friends[i]); 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What for loops does is, it initializes a variable named &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, and as long as &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; is less than five &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt; 5&lt;/code&gt; , it keeps increasing it by 1 &lt;code class=&quot;highlighter-rouge&quot;&gt;i++&lt;/code&gt;. This way the statement inside for loop runs 5 times, showing each element of array in a popup.&lt;/p&gt;
+
+&lt;p&gt;This syntax is fine when we know the legnth of array (5 here) .In case the length of array is changing or we are not yet sure about how many elements we would put in it, then we can use a special javascript method called &lt;code class=&quot;highlighter-rouge&quot;&gt;.length&lt;/code&gt; to access the length of array.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var friends = ['jane', 'mary', 'valerie', 'stephanie', 'carol'];
+
+for(i = 0; i &amp;lt; friends.length; i++) {
+    alert(friends[i]); 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Another simpler way to traverse arrays in javascript is to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement&quot; title=&quot;for .. in &quot;&gt;for .. in &lt;/a&gt;loop.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var friends = ['jane', 'mary', 'valerie', 'stephanie', 'carol']
+
+for(i in friends) {
+    alert(friends[i]); 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;insert-an-element-at-end-or-array&quot;&gt;Insert an element at end or array&lt;/h3&gt;
+
+&lt;p&gt;Inserting an element at end of array is the simplest. Just find the length of array. Now you should note here that length of array is always one greater than highest index. So in following array&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var arr = [45,46,47,48,49];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Highest index value is 4, as &lt;code class=&quot;highlighter-rouge&quot;&gt;arr[4]&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;49&lt;/code&gt; but &lt;code class=&quot;highlighter-rouge&quot;&gt;arr.length&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; as there are 5 elements in array. So if we want to add an element at end of this array, we need to do it at &lt;code class=&quot;highlighter-rouge&quot;&gt;arr[5]&lt;/code&gt; which can also be written as &lt;code class=&quot;highlighter-rouge&quot;&gt;arr[arr.length]&lt;/code&gt;. So to insert an element at end of array, allw we have to do is :-&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var arr = [45,46,47,48,49];
+arr[arr.length] = 50; // which is same ass arr[5] = 50;
+
+alert(arr); // will show 45,46,47,48,49,50 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above funciton was a bit general that can be used in any other programming language. A more javascript-ish way is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;.push()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var arr = [45,46,47,48,49];
+arr.push(50);
+
+alert(arr); // will show 45,46,47,48,49,50 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;insert-an-element-at-any-index&quot;&gt;Insert an element at any index&lt;/h3&gt;
+
+&lt;p&gt;Inserting an element at beginning or mid of array is a tiny bit tricky. Because say if you want to add an element at 3rd index , then you have to move all the elements that come after 3rd element one index ahead.&lt;/p&gt;
+
+&lt;p&gt;Let’s first setup our array and variables. We need an array, a new value to be inserted into that array, and a position at which the array will be inserted.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var fruits = ['apple','orange', 'kiwi', 'banana', 'mango'];
+var newValue = 'pear';
+var insPos = 2; 
+//we will add a new fruit (pear) at fruits[2], a.k.a in place of 'kiwi'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we need to know the highest index value of an array. As discussed earlier array.length is always 1 greater than highest index value. We can also say that highest index value is 1 less than length of an array.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var fruits = ['apple','orange', 'kiwi', 'banana', 'mango'];
+var newValue = 'pear';
+var insPos = 2; //insert Position
+//we will add a new fruit (pear) at fruits[2], a.k.a in place of 'kiwi'
+
+highestIndex = fruits.length - 1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Our array and all other variables are now prepared. Next step would be to move each element after &lt;code class=&quot;highlighter-rouge&quot;&gt;insPos&lt;/code&gt; one index ahead.We start from last element of array and move upwards till insert position.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for(i = highestIndex; i &amp;gt;=insPos; i--){
+    fruits[i+1] = fruits[i];
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now only thing left is to insert element at required position.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    fruits[insPos] = newValue;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The complete code now looks like.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var fruits = ['apple','orange', 'kiwi', 'banana', 'mango'];
+var newValue = 'pear';
+var insPos = 2; 
+//we will add a new fruit (pear) at fruits[2], a.k.a in place of 'kiwi'
+
+highestIndex = fruits.length - 1;
+
+for(i = highestIndex; i &amp;gt;=insPos; i--){
+    fruits[i+1] = fruits[i];
+}
+
+fruits[i] = newValue;
+alert(fruits);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hurray! now we have inserted an element into array.&lt;/p&gt;
+
+&lt;h3 id=&quot;removing-an-element-from-end-of-array&quot;&gt;Removing an element from end of array.&lt;/h3&gt;
+
+&lt;p&gt;I have been unable to find a general way to remove an element from array in javascript. If you know one, let me know in comments or you can also send a PR to this article. So we are going to use Javascript’s &lt;code class=&quot;highlighter-rouge&quot;&gt;.pop()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var arr = [45,46,47,48,49];
+arr.pop();
+
+alert(arr); // will show 45,46,47,48 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;removing-an-element-from-any-index&quot;&gt;Removing an element from any index.&lt;/h3&gt;
+
+&lt;p&gt;For removing an element from a certain index we will use &lt;code class=&quot;highlighter-rouge&quot;&gt;.splice()&lt;/code&gt; method of javascript. Which removes the array at an index with single line of code. If that function was not available we would have deleted an array item from the array and then moved all the next elements one index value back. But as I don’t know a general method of deleting some variable or array element in javascript, I will use built-in method splice to have same effect.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var arr = [45,46,47,48,49];
+var remPos = 2;
+arr.splice(remPos, 1);
+
+alert(arr); // will show 45,46,48,49 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So that completes guide to a very basic data structure called arrays. Array is a data structure that we will use to create other complex datastructures like matrices and graphs and so on. Stay tuned…&lt;/p&gt;
+</description>
+        <pubDate>Wed, 17 Aug 2016 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/javascript/data-structures-using-javascript-arrays.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/javascript/data-structures-using-javascript-arrays.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
+    
+      <item>
+        <title>Network security notes</title>
+        <description>&lt;p&gt;Below are the list of links about recent topics that I have been studying and teaching. For GNDPC, students here are your notes for second sessional exams ;).&lt;/p&gt;
+
+&lt;h1 id=&quot;vpn&quot;&gt;VPN&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://computer.howstuffworks.com/vpn.htm&quot;&gt;All about VPN&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.bestvpn.com/blog/4147/pptp-vs-l2tp-vs-openvpn-vs-sstp-vs-ikev2/&quot;&gt;VPN Protocol Basics&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc784994(v=ws.10).aspx&quot;&gt;Internet Key Exchange&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;ids&quot;&gt;IDS&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=c6T4Dnixc0k&quot;&gt;All about IDS&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.techopedia.com/definition/4136/teardrop-attack&quot;&gt;Teardrop Attack&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.incapsula.com/ddos/ddos-attacks/denial-of-service.html&quot;&gt;DOS Attack&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 21 Mar 2016 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/links/notes.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/links/notes.html</guid>
+        
+        
+        <category>links</category>
+        
+      </item>
+    
+      <item>
+        <title>Why we need Intrusion Detection System?</title>
+        <description>&lt;p&gt;Antiviruses and Firewalls are the gatekeepers, they try to keep enemy out but what if enemy has already entered? What to do of the enemy within?&lt;/p&gt;
+
+&lt;p&gt;Any country like India would understand the need of having, at least, two armed forces: one that stays on borders and tries to keep the enemy out and another that looks at the enemy within. Indians have the third largest standing army but no matter how strong it is, still intruders/terrorists get inside through the borders and wreak havoc. 26/11 and recent Gurdaspur Firings are good examples of breaches in Indian border security.&lt;/p&gt;
+
+&lt;p&gt;Similarly, we may have a strict firewall and a very advanced AntiVirus, still all you get is an illusion of security. Now, I am not saying that they are not useful but &lt;strong&gt;it’s foolish to expect that no one will ever bypass your security&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Firewalls have little doors and windows inside them, the windows through which you are able to access the internet, watch a video or send an email. Antiviruses are good enough to detect only the viruses, that are already known to them and the weakest link in your security are humans. Humans that have emotions, prejudices, egoes and are prone to social engineering.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So while the Firewalls and Antiviruses try to keep the bad stuff out of the door, Intrusion Detection Systems try to detect malicious activity that has already entered the system.&lt;/strong&gt; Intrusion Detection systems start when the system has failed to keep the bad stuff away.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So how do intrusion detection systems work?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;IDSs try to check for an activity that could be thought of as malicious and makes a guess if it’s an intrusion or not. For example there’s an IP that’s hitting at multiple ports, now why would someone do that?&lt;/p&gt;
+
+&lt;p&gt;The only obvious answer we can think of is someone trying to check which of the ports is open. Hitting all ports is similar to someone trying to open all the doors in hallway, obviously a strange activity that deserves attention. However is it really an intrusion or not? The answer would be we can’t be 100% sure. Here’s the point where &lt;strong&gt;tuning&lt;/strong&gt; comes in. Intrusion Detection System is as much as a technology as much as it is a policy. Suppose we have configured our IDS initially and for the first week it gave way too many alerts, most of them being false positives, we would go back to configuration files and tune it, change it until we have the perfect balance.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Feb 2013 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/lectures/why-intrusion-detection-system.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/lectures/why-intrusion-detection-system.html</guid>
+        
+        
+        <category>lectures</category>
+        
+      </item>
+    
+      <item>
+        <title>Virtual Private Network</title>
+        <description>&lt;p&gt;There is no one right definition of democracy, but if we were to comprehend on what it would look like? This world wide web, &lt;strong&gt;The Internet&lt;/strong&gt; would be the most example. No surprise that governments and authoritative bodies freak out and try to control and limit what we, the netizens can freely access. However, we don’t have to succumb to the atrocities they commit. We can free ourselves from the cages of censorships and firewalls as long as we have the messiah that they call &lt;strong&gt;Virtual Private Network&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;/h2&gt;
+
+&lt;p&gt;There are two types of networks:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Public Networks&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Private Networks&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Public Network&lt;/strong&gt; just like our internet is available to everyone, whereas &lt;strong&gt;Private Network&lt;/strong&gt; has restricted access to only a few. An example of private network would an office network or a college network.&lt;/p&gt;
+
+&lt;p&gt;We do not have any control over the wires, router and other hardware that makes up the internet. So while surfing a public network there’s a possibility that someone could read our private conversations. Private networks provide that security and privacy but they are not scalable and the cost of establishing a private network is high.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Virtual Private Network&lt;/strong&gt; acronymed as VPN is a best of both worlds situation. It’s private network that runs on public network. It uses the infrastructure of public network to provide the functionality of private network.&lt;/p&gt;
+
+&lt;p&gt;A very good analogy to explain the basics of Public Networks, Private Networks and VPNs is given at &lt;a href=&quot;http://computer.howstuffworks.com/vpn1.htm&quot;&gt;howstuffworks.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Features and benefits of VPN depends upon what VPN software or what VPN service that you are using. However an average VPN would 3 inherent features &lt;strong&gt;Security, Scalability &amp;amp; Reliability&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;A VPN provides &lt;strong&gt;security&lt;/strong&gt; by protecting your data from intruders. If your data is on public network it does not mean it’s up for public use.&lt;/p&gt;
+
+&lt;p&gt;VPN is as &lt;strong&gt;scalable&lt;/strong&gt; as a public network a.k.a anyplace where internet is available. You can connect to your office network from around the world. You can work for international companies while sitting in the comfort of your home.&lt;/p&gt;
+
+&lt;p&gt;A VPN has to be &lt;strong&gt;reliable&lt;/strong&gt; , there should be no disruption to the users. In many cases VPN arguably provides more reliability than a private network. A private network has to be managed internally by network administrators, so it’s reliability depends upon the skills of your network administrators. However Internet being a public network is managed by thousands of companies and ISPs. It’s in their good interest to provide reliability and seamless service.&lt;/p&gt;
+
+&lt;h2 id=&quot;types-of-vpn&quot;&gt;Types of VPN&lt;/h2&gt;
+&lt;p&gt;There are two types of VPN Remote Access VPN &amp;amp; Site to Site VPN.&lt;/p&gt;
+
+&lt;h3 id=&quot;remote-access-vpn&quot;&gt;Remote Access VPN&lt;/h3&gt;
+&lt;p&gt;When a single user connects to a private network through VPN remotely is called Remote Access VPN. The user may be at home, vaccationing in himalayas or travelling in train, she can connect to private network as she is in office. It is also called &lt;strong&gt;Virtual Private Dial Up network&lt;/strong&gt; . User connects to a special hardware called &lt;strong&gt;Network Access Server (NAS)&lt;/strong&gt; also called as &lt;strong&gt;Media Server&lt;/strong&gt; or &lt;strong&gt;Remote Access Server&lt;/strong&gt;. NAS handles the authentication and authorization process, after which user is granted an entry to private network. Now enterprises can handle all the setup themselves or hire an &lt;em&gt;Enterprise Service Provider&lt;/em&gt; to do that for them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://s.hswstatic.com/gif/vpn-1.gif&quot; alt=&quot;Remote Access VPN&quot; title=&quot;Remote Access VPN&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;site-to-site-vpn&quot;&gt;Site to Site VPN&lt;/h3&gt;
+&lt;p&gt;When we connet two private networks together it’s called Site to Site VPN. When both sites belong to single company then it’s called &lt;strong&gt;Intranet Site to Site VPN&lt;/strong&gt; whereas when both sites belong to different companies it’s called &lt;strong&gt;Extranet Site to Site VPN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;More at &lt;a href=&quot;http://computer.howstuffworks.com/vpn1.htm&quot;&gt;howstuffworks.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Feb 2013 18:38:19 +0000</pubDate>
+        <link>http://0.0.0.0:8080/lectures/virtual-private-network.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:8080/lectures/virtual-private-network.html</guid>
+        
+        
+        <category>lectures</category>
         
       </item>
     

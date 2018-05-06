@@ -1,18 +1,15 @@
 ---
 published: true
 layout: post
-title:  "Beginner's Guide to CSS Grids"
+title:  "A Beginner's Guide to Using CSS Grids."
 date:   2017-07-08 00:08:19 +0530
 categories: css
 author: Ishwerdas
 image: grids.jpg
 permalink: "/css/:title.html"
 comments: true
+tagline: You know what, I am a big fan of Richard Fyenman's technique  of reducing everything to freshman level. I believe as he did, that if you are unable to hat's taught on web development.
 ---
-Hey,
-
-How are you? 
-
 You know what, I am a big fan of Richard Fyenman's technique  of reducing everything to freshman level. I believe as he did, that if you are unable to explain a concept in simplest words you don't really understand it. 
 
 Addition of Grids in CSS spec is something that would change every course that's taught on web development. CSS Grids is relatively new but as fundamental a concept as say box model. So let's try teaching it without assuming any CSS expertise from audience.
